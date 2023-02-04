@@ -23,17 +23,24 @@ namespace StinkySteak.Rootdash.Station
         private float _duration;
 
 
+        public int ItemInputId => _itemInput.Id;
         public string Name => _name;
+        public bool IsReady => _isReady;
+        public bool IsProcessing => _isProcessing;
+
 
         private IProcessingStationManager _manager;
 
+        public event System.Action OnProcessingDone;
+
         private void Start()
-            => _manager = DependencyManager.Instance.ProcessingStationManager;
+        {
+            _manager = DependencyManager.Instance.ProcessingStationManager;
+            _manager.Register(this);
+        }
 
         public void Interact()
-        {
-            _manager.Interact(this);
-        }
+            => _manager.Interact(this);
 
         private void Update()
         {
@@ -48,14 +55,32 @@ namespace StinkySteak.Rootdash.Station
 
         private void ProcessingDone()
         {
-            _isProcessing = true;
+            _isProcessing = false;
+            _isReady = true;
+            OnProcessingDone?.Invoke();
         }
 
-        public void Process()
+        public bool TryCollect(out ItemData processedItem)
         {
-            if (_isProcessing || _isReady) return;
+            processedItem = null;
+            if (!_isReady) return false;
 
+            processedItem = _itemOutput;
+            _isReady = false;
+
+            print($"[ProcessingStation]: ({gameObject.name}) Sending Output {processedItem.Hash}");
+            return true;
+        }
+
+        public bool TryProcess()
+        {
+            if (_isProcessing || _isReady) return false;
+
+            print($"[ProcessingStation]: ({gameObject.name}) Processing...");
+
+            _isProcessing = true;
             _duration = _processingDuration;
+            return true;
         }
     }
 }

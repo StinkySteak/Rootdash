@@ -17,11 +17,12 @@ namespace StinkySteak.Rootdash.Station
         private IProviderStationManager _manager;
 
         private void Start()
-            => _manager = DependencyManager.Instance.ProviderStationManager;
+        {
+            _manager = DependencyManager.Instance.ProviderStationManager;
+            _manager.Register(this);
+        }
 
         public void Interact()
-        {
-            _manager.Interact(this);
-        }
+            => _manager.Interact(this);
     }
 }

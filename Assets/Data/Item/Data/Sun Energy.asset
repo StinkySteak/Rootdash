@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8034e3ff3b77e4dae471417e50beeb, type: 3}
   m_Name: Sun Energy
   m_EditorClassIdentifier: 
+  _id: 4
   _hash: sun
   _displayName: Sun Energy
   _sprite: {fileID: 0}

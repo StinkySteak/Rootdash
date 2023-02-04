@@ -10,15 +10,17 @@ namespace StinkySteak.Rootdash.Player
 
         public ItemData HeldItem => _heldItem;
 
-        public void SetHeldItem(ItemData heldItem)
+        public bool IsHolding => _heldItem != null;
+
+        public void SetHeldItem(ItemData newItem, bool forceReplace = false)
         {
-            if (heldItem != null)
+            if (IsHolding && newItem != null && !forceReplace)
             {
-                Debug.LogWarning($"[PlayerItem]: Held Item Exist: {heldItem.Hash}");
+                Debug.LogWarning($"[PlayerItem]: Held Item Exist: {_heldItem.Hash}");
                 return;
             }
 
-            _heldItem = heldItem;
+            _heldItem = newItem;
         }
     }
 }

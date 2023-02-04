@@ -7,5 +7,6 @@ namespace StinkySteak.Rootdash.Dependency
     {
         public IProviderStationManager ProviderStationManager { get; set; }
         public IProcessingStationManager ProcessingStationManager { get; set; }
+        public IMatchManager MatchManager { get; set; }
     }
 }

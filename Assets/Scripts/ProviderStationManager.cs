@@ -19,8 +19,6 @@ namespace StinkySteak.Rootdash.Manager
             => _stations.Add(station);
 
         private void Start()
-        {
-            DependencyManager.Instance.ProviderStationManager = this;
-        }
+            => DependencyManager.Instance.ProviderStationManager = this;
     }
 }

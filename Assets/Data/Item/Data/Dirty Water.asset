@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8034e3ff3b77e4dae471417e50beeb, type: 3}
   m_Name: Dirty Water
   m_EditorClassIdentifier: 
+  _id: 1
   _hash: water_dirt
   _displayName: Dirty Water
   _sprite: {fileID: 0}

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8034e3ff3b77e4dae471417e50beeb, type: 3}
   m_Name: Ultimate Nutrition
   m_EditorClassIdentifier: 
+  _id: 5
   _hash: nutrition
   _displayName: Ultimate Nutrition
   _sprite: {fileID: 0}
