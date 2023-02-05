@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Hungry Leaf
   m_EditorClassIdentifier: 
   _id: 3
-  _hash: root_hungry
+  _hash: leaf_hungry
   _displayName: Hungry Root
-  _duration: 6
+  _duration: 30
   _requiredItems:
   - {fileID: 11400000, guid: 2772a9df09bce374f87e250cc91e41b0, type: 2}
   - {fileID: 11400000, guid: 2772a9df09bce374f87e250cc91e41b0, type: 2}
-  _sprite: {fileID: 0}
+  _sprite: {fileID: -1073424027, guid: 238fafa36c539e248b34e4235353ac74, type: 3}

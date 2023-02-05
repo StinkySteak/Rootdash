@@ -10,7 +10,7 @@ namespace StinkySteak.Rootdash.UI.Listing
     public class UIOrderListing : UIListing
     {
         [SerializeField] private Slider _slider;
-        [SerializeField] private Image[] _requirements;
+        [SerializeField] private UIImages[] _requirements;
         [SerializeField][ReadOnly] private ActiveOrder _order;
 
         private ITickManager _manager;
@@ -34,8 +34,13 @@ namespace StinkySteak.Rootdash.UI.Listing
 
             for (int i = 0; i < _order.Customer.RequiredItems.Length; i++)
             {
-                _requirements[i].gameObject.SetActive(true);
-                _requirements[i].sprite = _order.Customer.RequiredItems[i].Sprite;
+                _image.sprite = _order.Customer.Sprite;
+
+                // 0: Main Parent
+                // 1: Icon Content
+
+                _requirements[i].Images[0].gameObject.SetActive(true);
+                _requirements[i].Images[1].sprite = _order.Customer.RequiredItems[i].Sprite;
             }
         }
     }

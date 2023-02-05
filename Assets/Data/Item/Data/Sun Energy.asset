@@ -15,4 +15,4 @@ MonoBehaviour:
   _id: 4
   _hash: sun
   _displayName: Sun Energy
-  _sprite: {fileID: 0}
+  _sprite: {fileID: 1038557893, guid: 9ed899e42194d4d41bce3bcc93934793, type: 3}

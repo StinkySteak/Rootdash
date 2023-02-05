@@ -7,5 +7,6 @@ namespace StinkySteak.Rootdash.Player
         bool IsHolding { get; }
         ItemData HeldItem { get; }
         void SetHeldItem(ItemData heldItem, bool forceReplace = false);
+        event System.Action<ItemData> OnHeldItemSet;
     }
 }

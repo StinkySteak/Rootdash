@@ -13,10 +13,11 @@ namespace StinkySteak.Rootdash.Manager
         MatchState MatchState { get; }
 
         event Action<MatchState> OnMatchStateChanged;
+        event Action<bool> OnGameEnded;
 
         /// <summary>
         /// Determine Elapsed time during MatchStart
         /// </summary>
-        float ElapsedTime { get; }
+        int RemainingLife { get; }
     }
 }

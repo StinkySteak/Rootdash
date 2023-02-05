@@ -34,6 +34,8 @@ namespace StinkySteak.Rootdash.Manager
 
         public event Action<ActiveOrder> OnOrderCompleted;
         public event Action OnOrderUpdated;
+        public event Action OnOrderFailed;
+        public event Action OnOrderClosed;
 
         protected override void Injected()
         {
@@ -62,6 +64,9 @@ namespace StinkySteak.Rootdash.Manager
             return false;
         }
 
+        /// <summary>
+        /// Remove Customer by Submitting Item
+        /// </summary>
         private void SubmitItemTo(ItemData itemData, int index)
         {
             _activeOrders[index].RemainingRequiredItems.Remove(itemData);
@@ -74,7 +79,17 @@ namespace StinkySteak.Rootdash.Manager
                 print($"[CustomerProcessor]: Order Completed: {_activeOrders[index].Customer.Hash}");
 
                 _activeOrders.RemoveAt(index);
+                CheckRemainingCustomer();
                 OnOrderUpdated?.Invoke();
+            }
+        }
+
+        private void CheckRemainingCustomer()
+        {
+            if (IsNextInexist())
+            {
+                OnOrderClosed?.Invoke();
+                return;
             }
         }
 
@@ -103,17 +118,23 @@ namespace StinkySteak.Rootdash.Manager
             RemoveCustomer();
         }
 
+        /// <summary>
+        /// Remove Customer by Lifetime
+        /// </summary>
         private void RemoveCustomer()
         {
             for (int i = 0; i < _activeOrders.Count; i++)
             {
                 ActiveOrder order = _activeOrders[i];
 
-                if(order.Timer.IsExpiredOrNotRunning(TickManager))
+                if (order.Timer.IsExpiredOrNotRunning(TickManager))
                 {
                     print($"[OrderProcessor]: Failed Customer: {order.Customer.Hash}");
 
+                    _failedOrder++;
                     _activeOrders.RemoveAt(i);
+                    OnOrderFailed?.Invoke();
+                    CheckRemainingCustomer();
                     OnOrderUpdated?.Invoke();
                 }
             }
@@ -149,9 +170,9 @@ namespace StinkySteak.Rootdash.Manager
                 _addCustomerTimer = TickTimer.CreateFromSeconds(TickManager, _customerSpawning[_activeCustomerIndex + 1].SpawnDelay);
             }
 
-            bool IsNextInexist()
-                => _activeCustomerIndex >= _customerSpawning.Length - 1;
-        }
 
+        }
+        private bool IsNextInexist()
+                => _activeCustomerIndex >= _customerSpawning.Length - 1;
     }
 }

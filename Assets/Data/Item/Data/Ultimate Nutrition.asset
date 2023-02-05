@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: 5
   _hash: nutrition
-  _displayName: Ultimate Nutrition
-  _sprite: {fileID: 0}
+  _displayName: Nutrition
+  _sprite: {fileID: 301489949, guid: 9ed899e42194d4d41bce3bcc93934793, type: 3}

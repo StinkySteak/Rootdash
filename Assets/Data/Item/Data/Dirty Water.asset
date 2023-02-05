@@ -15,4 +15,4 @@ MonoBehaviour:
   _id: 1
   _hash: water_dirt
   _displayName: Dirty Water
-  _sprite: {fileID: 0}
+  _sprite: {fileID: 1530489088, guid: 9ed899e42194d4d41bce3bcc93934793, type: 3}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a42c6805ce7ca4280a53c80f13a5a3, type: 3}
+  m_Name: Mini Tree Variant
+  m_EditorClassIdentifier: 
+  _id: 1
+  _hash: mini_tree
+  _displayName: Mini Tree
+  _duration: 30
+  _requiredItems:
+  - {fileID: 11400000, guid: 5f4ef01e572d8374ea81b99be6f7463b, type: 2}
+  - {fileID: 11400000, guid: be8463a1789dd414b859b23df5ea7687, type: 2}
+  _sprite: {fileID: 1464161940, guid: 238fafa36c539e248b34e4235353ac74, type: 3}

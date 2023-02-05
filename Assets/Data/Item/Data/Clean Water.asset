@@ -15,4 +15,4 @@ MonoBehaviour:
   _id: 2
   _hash: water_clean
   _displayName: Clean Water
-  _sprite: {fileID: 0}
+  _sprite: {fileID: -262282182, guid: 9ed899e42194d4d41bce3bcc93934793, type: 3}

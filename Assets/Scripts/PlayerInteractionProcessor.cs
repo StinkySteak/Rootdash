@@ -65,7 +65,10 @@ namespace StinkySteak.Rootdash.Player
                 }
 
                 //Attempt to Process Item
-                if (_playerItem.IsHolding && _playerItem.HeldItem.Id != station.ItemInputId)
+                if (!_playerItem.IsHolding)
+                    return;
+
+                if (_playerItem.HeldItem.Id != station.ItemInputId)
                     return;
 
                 if (!station.IsReady)

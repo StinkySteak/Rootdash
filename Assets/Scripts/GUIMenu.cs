@@ -7,6 +7,14 @@ namespace StinkySteak.Rootdash.UI.GUI
 {
     public class GUIMenu : MonoBehaviour
     {
+        [Header("Story")]
+        [SerializeField] private GameObject _storyPanel;
+        [SerializeField] private Image _storyImage;
+        [SerializeField] private Sprite[] _storySprites;
+        [SerializeField] private Button _storyClickButton;
+        private int _currentStory;
+
+        [Space]
         [SerializeField] private SceneLoader _sceneLoader;
         [SerializeField] private Button _playButton;
 
@@ -16,12 +24,34 @@ namespace StinkySteak.Rootdash.UI.GUI
 
         private void Start()
         {
-            
+            AddListener();
         }
 
         private void AddListener()
         {
-            _playButton.onClick.AddListener(() => _sceneLoader.LoadGameScene());
+            _playButton.onClick.AddListener(() => StartStory());
+            _storyClickButton.onClick.AddListener(() => OnStoryClicked());
+        }
+
+        private void StartStory()
+        {
+            _storyPanel.SetActive(true);
+            _currentStory = 0;
+        }
+
+        private void OnStoryClicked()
+        {
+            _storyImage.sprite = _storySprites[_currentStory];
+
+            if (_currentStory >= _storySprites.Length - 1)
+                CloseStory();
+
+            _currentStory++;
+        }
+
+        private void CloseStory()
+        {
+            _sceneLoader.LoadGameScene();
         }
     }
 }

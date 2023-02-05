@@ -15,6 +15,7 @@ MonoBehaviour:
   _id: 2
   _hash: leaf
   _displayName: Leaf
-  _duration: 5
-  _requiredItems: []
-  _sprite: {fileID: 0}
+  _duration: 30
+  _requiredItems:
+  - {fileID: 11400000, guid: be8463a1789dd414b859b23df5ea7687, type: 2}
+  _sprite: {fileID: -1073424027, guid: 238fafa36c539e248b34e4235353ac74, type: 3}

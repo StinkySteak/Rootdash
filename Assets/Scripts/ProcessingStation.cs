@@ -3,6 +3,7 @@ using StinkySteak.Rootdash.Data.Item;
 using StinkySteak.Rootdash.Dependency;
 using StinkySteak.Rootdash.Interactable;
 using StinkySteak.Rootdash.Manager;
+using System;
 using UnityEngine;
 
 namespace StinkySteak.Rootdash.Station
@@ -31,7 +32,8 @@ namespace StinkySteak.Rootdash.Station
 
         private IProcessingStationManager _manager;
 
-        public event System.Action OnProcessingDone;
+        public event Action<ItemData> OnReady;
+        public event Action OnCollected;
 
         private void Start()
         {
@@ -54,7 +56,7 @@ namespace StinkySteak.Rootdash.Station
         private void ProcessingDone()
         {
             _isReady = true;
-            OnProcessingDone?.Invoke();
+            OnReady?.Invoke(_itemOutput);
         }
 
         public bool TryCollect(out ItemData processedItem)
@@ -66,6 +68,7 @@ namespace StinkySteak.Rootdash.Station
             _isReady = false;
 
             print($"[ProcessingStation]: ({gameObject.name}) Sending Output {processedItem.Hash}");
+            OnCollected?.Invoke();
             return true;
         }
 

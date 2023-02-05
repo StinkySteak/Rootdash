@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28a42c6805ce7ca4280a53c80f13a5a3, type: 3}
   m_Name: Mini Tree
   m_EditorClassIdentifier: 
-  _id: 1
+  _id: 5
   _hash: mini_tree
   _displayName: Mini Tree
-  _duration: 5
-  _requiredItems: []
-  _sprite: {fileID: 0}
+  _duration: 30
+  _requiredItems:
+  - {fileID: 11400000, guid: 5f4ef01e572d8374ea81b99be6f7463b, type: 2}
+  _sprite: {fileID: 1464161940, guid: 238fafa36c539e248b34e4235353ac74, type: 3}
