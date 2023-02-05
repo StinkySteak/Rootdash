@@ -1,6 +1,7 @@
 using StinkySteak.Rootdash.Data.Item;
 using StinkySteak.Rootdash.Dependency;
 using StinkySteak.Rootdash.Manager;
+using StinkySteak.Rootdash.Station;
 using UnityEngine;
 
 namespace StinkySteak.Rootdash.Player
@@ -9,6 +10,8 @@ namespace StinkySteak.Rootdash.Player
     {
         private IProcessingStationManager _processingStationManager;
         private IProviderStationManager _providerStationManager;
+        private ISubmittingStationManager _submittingStationManager;
+        private IOrderProcessor _orderProcessor;
         private IPlayerCharacter _character;
 
         private IPlayerItem _playerItem => _character.Item;
@@ -21,15 +24,28 @@ namespace StinkySteak.Rootdash.Player
         {
             _processingStationManager = DependencyManager.Instance.ProcessingStationManager;
             _providerStationManager = DependencyManager.Instance.ProviderStationManager;
+            _submittingStationManager = DependencyManager.Instance.SubmittingStationManager;
+            _orderProcessor = DependencyManager.Instance.CustomerProcessor;
+
+            print($"Customer Processor: {_orderProcessor == null}");
 
             _processingStationManager.OnInteract += OnProcessingStationManager;
             _providerStationManager.OnInteract += OnProviderStationManager;
+            _submittingStationManager.OnInteract += OnSubmitting;
         }
 
-        private void OnProviderStationManager(Station.IProviderStation station)
+        private void OnSubmitting(ISubmittingStation station)
+        {
+            if (!_playerItem.IsHolding) return;
+
+            if(_orderProcessor.TrySubmit(_playerItem.HeldItem))
+                _playerItem.SetHeldItem(null);
+        }
+
+        private void OnProviderStationManager(IProviderStation station)
             => _playerItem.SetHeldItem(station.ProvidedItem);
 
-        private void OnProcessingStationManager(Station.IProcessingStation station)
+        private void OnProcessingStationManager(IProcessingStation station)
         {
             if (TrySwapitem()) return;
 
@@ -37,10 +53,21 @@ namespace StinkySteak.Rootdash.Player
 
             void ProcessGenerally()
             {
+                //Attempt to Collect
                 if (!_playerItem.IsHolding)
-                    return;
+                {
+                    if (station.IsReady)
+                    {
+                        if (station.TryCollect(out ItemData itemData))
+                        {
+                            _playerItem.SetHeldItem(itemData);
+                            return;
+                        }
+                    }
+                }
 
-                if (_playerItem.HeldItem.Id != station.ItemInputId)
+                //Attempt to Process Item
+                if (_playerItem.IsHolding && _playerItem.HeldItem.Id != station.ItemInputId)
                     return;
 
                 if (!station.IsReady)

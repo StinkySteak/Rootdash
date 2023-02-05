@@ -4,7 +4,7 @@ using UnityEngine;
 namespace StinkySteak.Rootdash
 {
     [System.Serializable]
-    public class CutomerSpawning
+    public class CustomerSpawning
     {
         [SerializeField] private float _spawnDelay;
         [SerializeField] private CustomerData _customer;

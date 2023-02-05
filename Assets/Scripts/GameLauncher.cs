@@ -12,6 +12,7 @@ namespace StinkySteak.Rootdash.Launcher
         [SerializeField][AssetsOnly] protected DependencyManager _dependencyManager;
 
         [Space]
+        [SerializeField][AssetsOnly] protected TickManager _tickManager;
         [SerializeField][AssetsOnly] protected MatchManager _matchManager;
 
         [Space]
@@ -23,13 +24,16 @@ namespace StinkySteak.Rootdash.Launcher
         protected void SpawnDependencyManager()
             => Instantiate(_dependencyManager);
 
+        protected void SpawnTickManager()
+            => Instantiate(_tickManager);
+
         protected void SpawnMatchManager()
             => _activeMatchManager = Instantiate(_matchManager);
 
-        protected void StartGame(MatchConfig config)
+        protected void StartGame(MatchConfig config, float delay = 1)
         {
             _activeMatchManager.SetConfig(config);
-            _activeMatchManager.StartMatch();
+            _activeMatchManager.StartMatch(delay);
         }
 
         protected void SpawnSystems()

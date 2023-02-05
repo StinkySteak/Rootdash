@@ -7,9 +7,9 @@ namespace StinkySteak.Data
     public class MatchConfig : ScriptableObject
     {
         [SerializeField] private float _duration;
-        [SerializeField] private CutomerSpawning[] _customers;
+        [SerializeField] private CustomerSpawning[] _customers;
 
         public float Duration => _duration;
-        public CutomerSpawning[] Customers => _customers;
+        public CustomerSpawning[] Customers => _customers;
     }
 }

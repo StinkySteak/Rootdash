@@ -12,6 +12,7 @@ namespace StinkySteak.Rootdash.Launcher
         private void Awake()
         {
             SpawnDependencyManager();
+            SpawnTickManager();
             SpawnMatchManager();
             SpawnSystems();
             SpawnUIs();

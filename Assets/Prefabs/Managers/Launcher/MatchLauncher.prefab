@@ -46,7 +46,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dependencyManager: {fileID: 7775792665347235023, guid: 4776e88fc736f504fb919035f2bc2b87,
     type: 3}
+  _tickManager: {fileID: 1707031558867448645, guid: 5327819109e2ce74fab5de6d0efd3a3e,
+    type: 3}
+  _matchManager: {fileID: 1839637651847965918, guid: 1d4b66e7f4121e24da66117054bd9e9a,
+    type: 3}
   _systems:
   - {fileID: 9068666865361652736, guid: 77b65e4b55ac5e249b9bc591065c2a8b, type: 3}
   - {fileID: 7398290589260087569, guid: 888a7a384680b3f4e89795de171cd0f7, type: 3}
+  - {fileID: 7986609301966762372, guid: bf204451576f438459de0aa6ad299bd8, type: 3}
+  - {fileID: 451710632805371659, guid: cd1ada0438500b14aa3abc2f955e8b33, type: 3}
   _uis: []
+  _config: {fileID: 11400000, guid: f2d7656f86b613c4f9b50af7a483327c, type: 2}

@@ -1,0 +1,1512 @@
+warning: in the working copy of 'Assets/Data/Item/Data/Clean Water.asset', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Assets/Data/Item/Data/Clorophyll.asset', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Assets/Data/Item/Data/Dirty Water.asset', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Assets/Data/Item/Data/Sun Energy.asset', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Assets/Data/Item/Data/Ultimate Nutrition.asset', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Assets/Scenes/SampleScene.unity', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ProjectSettings/GraphicsSettings.asset', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ProjectSettings/ProjectSettings.asset', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'UserSettings/Layouts/default-2021.dwlt', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/Assets/Data/Item/Data/Clean Water.asset b/Assets/Data/Item/Data/Clean Water.asset[m
+[1mindex 90de614..2daa275 100644[m
+[1m--- a/Assets/Data/Item/Data/Clean Water.asset[m	
+[1m+++ b/Assets/Data/Item/Data/Clean Water.asset[m	
+[36m@@ -12,6 +12,7 @@[m [mMonoBehaviour:[m
+   m_Script: {fileID: 11500000, guid: dc8034e3ff3b77e4dae471417e50beeb, type: 3}[m
+   m_Name: Clean Water[m
+   m_EditorClassIdentifier: [m
+[32m+[m[32m  _id: 2[m
+   _hash: water_clean[m
+   _displayName: Clean Water[m
+   _sprite: {fileID: 0}[m
+[1mdiff --git a/Assets/Data/Item/Data/Clorophyll.asset b/Assets/Data/Item/Data/Clorophyll.asset[m
+[1mindex 9162951..47ea236 100644[m
+[1m--- a/Assets/Data/Item/Data/Clorophyll.asset[m
+[1m+++ b/Assets/Data/Item/Data/Clorophyll.asset[m
+[36m@@ -12,6 +12,7 @@[m [mMonoBehaviour:[m
+   m_Script: {fileID: 11500000, guid: dc8034e3ff3b77e4dae471417e50beeb, type: 3}[m
+   m_Name: Clorophyll[m
+   m_EditorClassIdentifier: [m
+[32m+[m[32m  _id: 3[m
+   _hash: cloro[m
+   _displayName: Clorophyll[m
+   _sprite: {fileID: 0}[m
+[1mdiff --git a/Assets/Data/Item/Data/Dirty Water.asset b/Assets/Data/Item/Data/Dirty Water.asset[m
+[1mindex 1224ea8..a9aba21 100644[m
+[1m--- a/Assets/Data/Item/Data/Dirty Water.asset[m	
+[1m+++ b/Assets/Data/Item/Data/Dirty Water.asset[m	
+[36m@@ -12,6 +12,7 @@[m [mMonoBehaviour:[m
+   m_Script: {fileID: 11500000, guid: dc8034e3ff3b77e4dae471417e50beeb, type: 3}[m
+   m_Name: Dirty Water[m
+   m_EditorClassIdentifier: [m
+[32m+[m[32m  _id: 1[m
+   _hash: water_dirt[m
+   _displayName: Dirty Water[m
+   _sprite: {fileID: 0}[m
+[1mdiff --git a/Assets/Data/Item/Data/Sun Energy.asset b/Assets/Data/Item/Data/Sun Energy.asset[m
+[1mindex adb94c2..ec648d3 100644[m
+[1m--- a/Assets/Data/Item/Data/Sun Energy.asset[m	
+[1m+++ b/Assets/Data/Item/Data/Sun Energy.asset[m	
+[36m@@ -12,6 +12,7 @@[m [mMonoBehaviour:[m
+   m_Script: {fileID: 11500000, guid: dc8034e3ff3b77e4dae471417e50beeb, type: 3}[m
+   m_Name: Sun Energy[m
+   m_EditorClassIdentifier: [m
+[32m+[m[32m  _id: 4[m
+   _hash: sun[m
+   _displayName: Sun Energy[m
+   _sprite: {fileID: 0}[m
+[1mdiff --git a/Assets/Data/Item/Data/Ultimate Nutrition.asset b/Assets/Data/Item/Data/Ultimate Nutrition.asset[m
+[1mindex 6a66f0c..7dffe1a 100644[m
+[1m--- a/Assets/Data/Item/Data/Ultimate Nutrition.asset[m	
+[1m+++ b/Assets/Data/Item/Data/Ultimate Nutrition.asset[m	
+[36m@@ -12,6 +12,7 @@[m [mMonoBehaviour:[m
+   m_Script: {fileID: 11500000, guid: dc8034e3ff3b77e4dae471417e50beeb, type: 3}[m
+   m_Name: Ultimate Nutrition[m
+   m_EditorClassIdentifier: [m
+[32m+[m[32m  _id: 5[m
+   _hash: nutrition[m
+   _displayName: Ultimate Nutrition[m
+   _sprite: {fileID: 0}[m
+[1mdiff --git a/Assets/IPlayerItem.cs b/Assets/IPlayerItem.cs[m
+[1mdeleted file mode 100644[m
+[1mindex 45bceb9..0000000[m
+[1m--- a/Assets/IPlayerItem.cs[m
+[1m+++ /dev/null[m
+[36m@@ -1,10 +0,0 @@[m
+[31m-using StinkySteak.Rootdash.Data.Item;[m
+[31m-[m
+[31m-namespace StinkySteak.Rootdash.Player[m
+[31m-{[m
+[31m-    public interface IPlayerItem[m
+[31m-    {[m
+[31m-        ItemData HeldItem { get; }[m
+[31m-        void SetHeldItem(ItemData heldItem);[m
+[31m-    }[m
+[31m-}[m
+\ No newline at end of file[m
+[1mdiff --git a/Assets/IPlayerItem.cs.meta b/Assets/IPlayerItem.cs.meta[m
+[1mdeleted file mode 100644[m
+[1mindex 6c45b86..0000000[m
+[1m--- a/Assets/IPlayerItem.cs.meta[m
+[1m+++ /dev/null[m
+[36m@@ -1,11 +0,0 @@[m
+[31m-fileFormatVersion: 2[m
+[31m-guid: 03ada3fad9a9b7d4680eb7a21aad1b8c[m
+[31m-MonoImporter:[m
+[31m-  externalObjects: {}[m
+[31m-  serializedVersion: 2[m
+[31m-  defaultReferences: [][m
+[31m-  executionOrder: 0[m
+[31m-  icon: {instanceID: 0}[m
+[31m-  userData: [m
+[31m-  assetBundleName: [m
+[31m-  assetBundleVariant: [m
+[1mdiff --git a/Assets/PlayerInteractionProcessor.cs b/Assets/PlayerInteractionProcessor.cs[m
+[1mdeleted file mode 100644[m
+[1mindex fc08026..0000000[m
+[1m--- a/Assets/PlayerInteractionProcessor.cs[m
+[1m+++ /dev/null[m
+[36m@@ -1,38 +0,0 @@[m
+[31m-using StinkySteak.Rootdash.Dependency;[m
+[31m-using StinkySteak.Rootdash.Manager;[m
+[31m-using UnityEngine;[m
+[31m-[m
+[31m-namespace StinkySteak.Rootdash.Player[m
+[31m-{[m
+[31m-    public class PlayerInteractionProcessor : MonoBehaviour, IPlayerComponent[m
+[31m-    {[m
+[31m-        private IProcessingStationManager _processingStationManager;[m
+[31m-        private IProviderStationManager _providerStationManager;[m
+[31m-        private IPlayerCharacter _character;[m
+[31m-[m
+[31m-        private IPlayerItem _playerItem => _character.Item;[m
+[31m-[m
+[31m-        public void SetComponent(IPlayerCharacter character)[m
+[31m-            => _character = character;[m
+[31m-[m
+[31m-[m
+[31m-        private void Start()[m
+[31m-        {[m
+[31m-            _processingStationManager = DependencyManager.Instance.ProcessingStationManager;[m
+[31m-            _providerStationManager = DependencyManager.Instance.ProviderStationManager;[m
+[31m-[m
+[31m-            _processingStationManager.OnInteract += OnProcessingStationManager;[m
+[31m-            _providerStationManager.OnInteract += OnProviderStationManager;[m
+[31m-        }[m
+[31m-[m
+[31m-        private void OnProviderStationManager(Station.IProviderStation obj)[m
+[31m-        {[m
+[31m-            _playerItem.SetHeldItem(obj.ProvidedItem);[m
+[31m-        }[m
+[31m-[m
+[31m-        private void OnProcessingStationManager(Station.IProcessingStation obj)[m
+[31m-        {[m
+[31m-            [m
+[31m-        }[m
+[31m-    }[m
+[31m-}[m
+\ No newline at end of file[m
+[1mdiff --git a/Assets/PlayerInteractionProcessor.cs.meta b/Assets/PlayerInteractionProcessor.cs.meta[m
+[1mdeleted file mode 100644[m
+[1mindex 7530673..0000000[m
+[1m--- a/Assets/PlayerInteractionProcessor.cs.meta[m
+[1m+++ /dev/null[m
+[36m@@ -1,11 +0,0 @@[m
+[31m-fileFormatVersion: 2[m
+[31m-guid: 36bc1a90a816d8a4bb63e603e505f4a6[m
+[31m-MonoImporter:[m
+[31m-  externalObjects: {}[m
+[31m-  serializedVersion: 2[m
+[31m-  defaultReferences: [][m
+[31m-  executionOrder: 0[m
+[31m-  icon: {instanceID: 0}[m
+[31m-  userData: [m
+[31m-  assetBundleName: [m
+[31m-  assetBundleVariant: [m
+[1mdiff --git a/Assets/Prefabs/ProcessingStationManager.prefab b/Assets/Prefabs/ProcessingStationManager.prefab[m
+[1mdeleted file mode 100644[m
+[1mindex 3bbfac7..0000000[m
+[1m--- a/Assets/Prefabs/ProcessingStationManager.prefab[m
+[1m+++ /dev/null[m
+[36m@@ -1,46 +0,0 @@[m
+[31m-%YAML 1.1[m
+[31m-%TAG !u! tag:unity3d.com,2011:[m
+[31m---- !u!1 &7398290589260087568[m
+[31m-GameObject:[m
+[31m-  m_ObjectHideFlags: 0[m
+[31m-  m_CorrespondingSourceObject: {fileID: 0}[m
+[31m-  m_PrefabInstance: {fileID: 0}[m
+[31m-  m_PrefabAsset: {fileID: 0}[m
+[31m-  serializedVersion: 6[m
+[31m-  m_Component:[m
+[31m-  - component: {fileID: 7398290589260087570}[m
+[31m-  - component: {fileID: 7398290589260087569}[m
+[31m-  m_Layer: 0[m
+[31m-  m_Name: ProcessingStationManager[m
+[31m-  m_TagString: Untagged[m
+[31m-  m_Icon: {fileID: 0}[m
+[31m-  m_NavMeshLayer: 0[m
+[31m-  m_StaticEditorFlags: 0[m
+[31m-  m_IsActive: 1[m
+[31m---- !u!4 &7398290589260087570[m
+[31m-Transform:[m
+[31m-  m_ObjectHideFlags: 0[m
+[31m-  m_CorrespondingSourceObject: {fileID: 0}[m
+[31m-  m_PrefabInstance: {fileID: 0}[m
+[31m-  m_PrefabAsset: {fileID: 0}[m
+[31m-  m_GameObject: {fileID: 7398290589260087568}[m
+[31m-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}[m
+[31m-  m_LocalPosition: {x: 0, y: 0, z: 0}[m
+[31m-  m_LocalScale: {x: 1, y: 1, z: 1}[m
+[31m-  m_ConstrainProportionsScale: 0[m
+[31m-  m_Children: [][m
+[31m-  m_Father: {fileID: 0}[m
+[31m-  m_RootOrder: 0[m
+[31m-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}[m
+[31m---- !u!114 &7398290589260087569[m
+[31m-MonoBehaviour:[m
+[31m-  m_ObjectHideFlags: 0[m
+[31m-  m_CorrespondingSourceObject: {fileID: 0}[m
+[31m-  m_PrefabInstance: {fileID: 0}[m
+[31m-  m_PrefabAsset: {fileID: 0}[m
+[31m-  m_GameObject: {fileID: 7398290589260087568}[m
+[31m-  m_Enabled: 1[m
+[31m-  m_EditorHideFlags: 0[m
+[31m-  m_Script: {fileID: 11500000, guid: 7e03a08dd777957499cd0aa84b69f2c2, type: 3}[m
+[31m-  m_Name: [m
+[31m-  m_EditorClassIdentifier: [m
+[1mdiff --git a/Assets/Prefabs/ProcessingStationManager.prefab.meta b/Assets/Prefabs/ProcessingStationManager.prefab.meta[m
+[1mdeleted file mode 100644[m
+[1mindex 00471ef..0000000[m
+[1m--- a/Assets/Prefabs/ProcessingStationManager.prefab.meta[m
+[1m+++ /dev/null[m
+[36m@@ -1,7 +0,0 @@[m
+[31m-fileFormatVersion: 2[m
+[31m-guid: 888a7a384680b3f4e89795de171cd0f7[m
+[31m-PrefabImporter:[m
+[31m-  externalObjects: {}[m
+[31m-  userData: [m
+[31m-  assetBundleName: [m
+[31m-  assetBundleVariant: [m
+[1mdiff --git a/Assets/Prefabs/ProviderStationManager.prefab b/Assets/Prefabs/ProviderStationManager.prefab[m
+[1mdeleted file mode 100644[m
+[1mindex 2ee418d..0000000[m
+[1m--- a/Assets/Prefabs/ProviderStationManager.prefab[m
+[1m+++ /dev/null[m
+[36m@@ -1,46 +0,0 @@[m
+[31m-%YAML 1.1[m
+[31m-%TAG !u! tag:unity3d.com,2011:[m
+[31m---- !u!1 &9068666865361652766[m
+[31m-GameObject:[m
+[31m-  m_ObjectHideFlags: 0[m
+[31m-  m_CorrespondingSourceObject: {fileID: 0}[m
+[31m-  m_PrefabInstance: {fileID: 0}[m
+[31m-  m_PrefabAsset: {fileID: 0}[m
+[31m-  serializedVersion: 6[m
+[31m-  m_Component:[m
+[31m-  - component: {fileID: 9068666865361652739}[m
+[31m-  - component: {fileID: 9068666865361652736}[m
+[31m-  m_Layer: 0[m
+[31m-  m_Name: ProviderStationManager[m
+[31m-  m_TagString: Untagged[m
+[31m-  m_Icon: {fileID: 0}[m
+[31m-  m_NavMeshLayer: 0[m
+[31m-  m_StaticEditorFlags: 0[m
+[31m-  m_IsActive: 1[m
+[31m---- !u!4 &9068666865361652739[m
+[31m-Transform:[m
+[31m-  m_ObjectHideFlags: 0[m
+[31m-  m_CorrespondingSourceObject: {fileID: 0}[m
+[31m-  m_PrefabInstance: {fileID: 0}[m
+[31m-  m_PrefabAsset: {fileID: 0}[m
+[31m-  m_GameObject: {fileID: 9068666865361652766}[m
+[31m-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}[m
+[31m-  m_LocalPosition: {x: 0, y: 0, z: 0}[m
+[31m-  m_LocalScale: {x: 1, y: 1, z: 1}[m
+[31m-  m_ConstrainProportionsScale: 0[m
+[31m-  m_Children: [][m
+[31m-  m_Father: {fileID: 0}[m
+[31m-  m_RootOrder: 0[m
+[31m-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}[m
+[31m---- !u!114 &9068666865361652736[m
+[31m-MonoBehaviour:[m
+[31m-  m_ObjectHideFlags: 0[m
+[31m-  m_CorrespondingSourceObject: {fileID: 0}[m
+[31m-  m_PrefabInstance: {fileID: 0}[m
+[31m-  m_PrefabAsset: {fileID: 0}[m
+[31m-  m_GameObject: {fileID: 9068666865361652766}[m
+[31m-  m_Enabled: 1[m
+[31m-  m_EditorHideFlags: 0[m
+[31m-  m_Script: {fileID: 11500000, guid: 10ab59bd6b72ae443bc96d4aa8bdcf74, type: 3}[m
+[31m-  m_Name: [m
+[31m-  m_EditorClassIdentifier: [m
+[1mdiff --git a/Assets/Prefabs/ProviderStationManager.prefab.meta b/Assets/Prefabs/ProviderStationManager.prefab.meta[m
+[1mdeleted file mode 100644[m
+[1mindex 73d4934..0000000[m
+[1m--- a/Assets/Prefabs/ProviderStationManager.prefab.meta[m
+[1m+++ /dev/null[m
+[36m@@ -1,7 +0,0 @@[m
+[31m-fileFormatVersion: 2[m
+[31m-guid: 77b65e4b55ac5e249b9bc591065c2a8b[m
+[31m-PrefabImporter:[m
+[31m-  externalObjects: {}[m
+[31m-  userData: [m
+[31m-  assetBundleName: [m
+[31m-  assetBundleVariant: [m
+[1mdiff --git a/Assets/Scenes/SampleScene.unity b/Assets/Scenes/SampleScene.unity[m
+[1mindex 996580d..21ba202 100644[m
+[1m--- a/Assets/Scenes/SampleScene.unity[m
+[1m+++ b/Assets/Scenes/SampleScene.unity[m
+[36m@@ -285,7 +285,7 @@[m [mTransform:[m
+   - {fileID: 134701582}[m
+   - {fileID: 851913304}[m
+   m_Father: {fileID: 0}[m
+[31m-  m_RootOrder: 5[m
+[32m+[m[32m  m_RootOrder: 4[m
+   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}[m
+ --- !u!1 &519420028[m
+ GameObject:[m
+[36m@@ -955,7 +955,7 @@[m [mBoxCollider2D:[m
+   serializedVersion: 2[m
+   m_Size: {x: 0.5, y: 8.5}[m
+   m_EdgeRadius: 0[m
+[31m---- !u!1 &1533276893[m
+[32m+[m[32m--- !u!1 &1238248829[m
+ GameObject:[m
+   m_ObjectHideFlags: 0[m
+   m_CorrespondingSourceObject: {fileID: 0}[m
+[36m@@ -963,44 +963,43 @@[m [mGameObject:[m
+   m_PrefabAsset: {fileID: 0}[m
+   serializedVersion: 6[m
+   m_Component:[m
+[31m-  - component: {fileID: 1533276895}[m
+[31m-  - component: {fileID: 1533276894}[m
+[32m+[m[32m  - component: {fileID: 1238248830}[m
+[32m+[m[32m  - component: {fileID: 1238248831}[m
+   m_Layer: 0[m
+[31m-  m_Name: GameLauncher[m
+[32m+[m[32m  m_Name: MatchManager[m
+   m_TagString: Untagged[m
+   m_Icon: {fileID: 0}[m
+   m_NavMeshLayer: 0[m
+   m_StaticEditorFlags: 0[m
+   m_IsActive: 1[m
+[31m---- !u!114 &1533276894[m
+[31m-MonoBehaviour:[m
+[31m-  m_ObjectHideFlags: 0[m
+[31m-  m_CorrespondingSourceObject: {fileID: 0}[m
+[31m-  m_PrefabInstance: {fileID: 0}[m
+[31m-  m_PrefabAsset: {fileID: 0}[m
+[31m-  m_GameObject: {fileID: 1533276893}[m
+[31m-  m_Enabled: 1[m
+[31m-  m_EditorHideFlags: 0[m
+[31m-  m_Script: {fileID: 11500000, guid: f9ecc85ff3fe1c84e82a45231e4059ce, type: 3}[m
+[31m-  m_Name: [m
+[31m-  m_EditorClassIdentifier: [m
+[31m-  _systems: [][m
+[31m-  _uis: [][m
+[31m---- !u!4 &1533276895[m
+[32m+[m[32m--- !u!4 &1238248830[m
+ Transform:[m
+   m_ObjectHideFlags: 0[m
+   m_CorrespondingSourceObject: {fileID: 0}[m
+   m_PrefabInstance: {fileID: 0}[m
+   m_PrefabAsset: {fileID: 0}[m
+[31m-  m_GameObject: {fileID: 1533276893}[m
+[32m+[m[32m  m_GameObject: {fileID: 1238248829}[m
+   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}[m
+   m_LocalPosition: {x: 0, y: 0, z: 0}[m
+   m_LocalScale: {x: 1, y: 1, z: 1}[m
+   m_ConstrainProportionsScale: 0[m
+   m_Children: [][m
+   m_Father: {fileID: 0}[m
+[31m-  m_RootOrder: 3[m
+[32m+[m[32m  m_RootOrder: 10[m
+   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}[m
+[32m+[m[32m--- !u!114 &1238248831[m
+[32m+[m[32mMonoBehaviour:[m
+[32m+[m[32m  m_ObjectHideFlags: 0[m
+[32m+[m[32m  m_CorrespondingSourceObject: {fileID: 0}[m
+[32m+[m[32m  m_PrefabInstance: {fileID: 0}[m
+[32m+[m[32m  m_PrefabAsset: {fileID: 0}[m
+[32m+[m[32m  m_GameObject: {fileID: 1238248829}[m
+[32m+[m[32m  m_Enabled: 1[m
+[32m+[m[32m  m_EditorHideFlags: 0[m
+[32m+[m[32m  m_Script: {fileID: 11500000, guid: 1753a7bab16e3094dacf90d47889c364, type: 3}[m
+[32m+[m[32m  m_Name:[m[41m [m
+[32m+[m[32m  m_EditorClassIdentifier:[m[41m [m
+[32m+[m[32m  _config: {fileID: 0}[m
+ --- !u!1 &1603496720[m
+ GameObject:[m
+   m_ObjectHideFlags: 0[m
+[36m@@ -1205,7 +1204,7 @@[m [mTransform:[m
+   - {fileID: 1097553178}[m
+   - {fileID: 1001840387}[m
+   m_Father: {fileID: 0}[m
+[31m-  m_RootOrder: 4[m
+[32m+[m[32m  m_RootOrder: 3[m
+   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}[m
+ --- !u!114 &1771797191[m
+ MonoBehaviour:[m
+[36m@@ -1310,37 +1309,6 @@[m [mSpriteRenderer:[m
+   m_WasSpriteAssigned: 1[m
+   m_MaskInteraction: 0[m
+   m_SpriteSortPoint: 0[m
+[31m---- !u!1 &1813131286[m
+[31m-GameObject:[m
+[31m-  m_ObjectHideFlags: 0[m
+[31m-  m_CorrespondingSourceObject: {fileID: 0}[m
+[31m-  m_PrefabInstance: {fileID: 0}[m
+[31m-  m_PrefabAsset: {fileID: 0}[m
+[31m-  serializedVersion: 6[m
+[31m-  m_Component:[m
+[31m-  - component: {fileID: 1813131288}[m
+[31m-  m_Layer: 0[m
+[31m-  m_Name: Player[m
+[31m-  m_TagString: Untagged[m
+[31m-  m_Icon: {fileID: 0}[m
+[31m-  m_NavMeshLayer: 0[m
+[31m-  m_StaticEditorFlags: 0[m
+[31m-  m_IsActive: 1[m
+[31m---- !u!4 &1813131288[m
+[31m-Transform:[m
+[31m-  m_ObjectHideFlags: 0[m
+[31m-  m_CorrespondingSourceObject: {fileID: 0}[m
+[31m-  m_PrefabInstance: {fileID: 0}[m
+[31m-  m_PrefabAsset: {fileID: 0}[m
+[31m-  m_GameObject: {fileID: 1813131286}[m
+[31m-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}[m
+[31m-  m_LocalPosition: {x: 0, y: 0, z: 0}[m
+[31m-  m_LocalScale: {x: 1, y: 1, z: 1}[m
+[31m-  m_ConstrainProportionsScale: 0[m
+[31m-  m_Children: [][m
+[31m-  m_Father: {fileID: 0}[m
+[31m-  m_RootOrder: 8[m
+[31m-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}[m
+ --- !u!1 &1821734097[m
+ GameObject:[m
+   m_ObjectHideFlags: 0[m
+[36m@@ -1460,7 +1428,7 @@[m [mTransform:[m
+   - {fileID: 2023705806}[m
+   - {fileID: 1789300589}[m
+   m_Father: {fileID: 0}[m
+[31m-  m_RootOrder: 6[m
+[32m+[m[32m  m_RootOrder: 5[m
+   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}[m
+ --- !u!1 &2023705805[m
+ GameObject:[m
+[36m@@ -1574,6 +1542,213 @@[m [mBoxCollider2D:[m
+   serializedVersion: 2[m
+   m_Size: {x: 1, y: 1}[m
+   m_EdgeRadius: 0[m
+[32m+[m[32m--- !u!1001 &2128060072[m
+[32m+[m[32mPrefabInstance:[m
+[32m+[m[32m  m_ObjectHideFlags: 0[m
+[32m+[m[32m  serializedVersion: 2[m
+[32m+[m[32m  m_Modification:[m
+[32m+[m[32m    m_TransformParent: {fileID: 0}[m
+[32m+[m[32m    m_Modifications:[m
+[32m+[m[32m    - target: {fileID: 7398290589260087568, guid: 888a7a384680b3f4e89795de171cd0f7,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_Name[m
+[32m+[m[32m      value: ProcessingStationManager[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 7398290589260087570, guid: 888a7a384680b3f4e89795de171cd0f7,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_RootOrder[m
+[32m+[m[32m      value: 7[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 7398290589260087570, guid: 888a7a384680b3f4e89795de171cd0f7,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalPosition.x[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 7398290589260087570, guid: 888a7a384680b3f4e89795de171cd0f7,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalPosition.y[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 7398290589260087570, guid: 888a7a384680b3f4e89795de171cd0f7,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalPosition.z[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 7398290589260087570, guid: 888a7a384680b3f4e89795de171cd0f7,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalRotation.w[m
+[32m+[m[32m      value: 1[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 7398290589260087570, guid: 888a7a384680b3f4e89795de171cd0f7,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalRotation.x[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 7398290589260087570, guid: 888a7a384680b3f4e89795de171cd0f7,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalRotation.y[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 7398290589260087570, guid: 888a7a384680b3f4e89795de171cd0f7,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalRotation.z[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 7398290589260087570, guid: 888a7a384680b3f4e89795de171cd0f7,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalEulerAnglesHint.x[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 7398290589260087570, guid: 888a7a384680b3f4e89795de171cd0f7,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalEulerAnglesHint.y[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 7398290589260087570, guid: 888a7a384680b3f4e89795de171cd0f7,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalEulerAnglesHint.z[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    m_RemovedComponents: [][m
+[32m+[m[32m  m_SourcePrefab: {fileID: 100100000, guid: 888a7a384680b3f4e89795de171cd0f7, type: 3}[m
+[32m+[m[32m--- !u!1001 &1527504766016349442[m
+[32m+[m[32mPrefabInstance:[m
+[32m+[m[32m  m_ObjectHideFlags: 0[m
+[32m+[m[32m  serializedVersion: 2[m
+[32m+[m[32m  m_Modification:[m
+[32m+[m[32m    m_TransformParent: {fileID: 0}[m
+[32m+[m[32m    m_Modifications:[m
+[32m+[m[32m    - target: {fileID: 1527504764562122173, guid: 8b0934f7dd7ad834f8fd0b0dc14242b1,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_Name[m
+[32m+[m[32m      value: MatchLauncher[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 1527504764562122179, guid: 8b0934f7dd7ad834f8fd0b0dc14242b1,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_RootOrder[m
+[32m+[m[32m      value: 8[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 1527504764562122179, guid: 8b0934f7dd7ad834f8fd0b0dc14242b1,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalPosition.x[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 1527504764562122179, guid: 8b0934f7dd7ad834f8fd0b0dc14242b1,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalPosition.y[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 1527504764562122179, guid: 8b0934f7dd7ad834f8fd0b0dc14242b1,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalPosition.z[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 1527504764562122179, guid: 8b0934f7dd7ad834f8fd0b0dc14242b1,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalRotation.w[m
+[32m+[m[32m      value: 1[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 1527504764562122179, guid: 8b0934f7dd7ad834f8fd0b0dc14242b1,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalRotation.x[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 1527504764562122179, guid: 8b0934f7dd7ad834f8fd0b0dc14242b1,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalRotation.y[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 1527504764562122179, guid: 8b0934f7dd7ad834f8fd0b0dc14242b1,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalRotation.z[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 1527504764562122179, guid: 8b0934f7dd7ad834f8fd0b0dc14242b1,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalEulerAnglesHint.x[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 1527504764562122179, guid: 8b0934f7dd7ad834f8fd0b0dc14242b1,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalEulerAnglesHint.y[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 1527504764562122179, guid: 8b0934f7dd7ad834f8fd0b0dc14242b1,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalEulerAnglesHint.z[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    m_RemovedComponents: [][m
+[32m+[m[32m  m_SourcePrefab: {fileID: 100100000, guid: 8b0934f7dd7ad834f8fd0b0dc14242b1, type: 3}[m
+[32m+[m[32m--- !u!1001 &5902733798995472782[m
+[32m+[m[32mPrefabInstance:[m
+[32m+[m[32m  m_ObjectHideFlags: 0[m
+[32m+[m[32m  serializedVersion: 2[m
+[32m+[m[32m  m_Modification:[m
+[32m+[m[32m    m_TransformParent: {fileID: 0}[m
+[32m+[m[32m    m_Modifications:[m
+[32m+[m[32m    - target: {fileID: 2226688750447557150, guid: 4776e88fc736f504fb919035f2bc2b87,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_Name[m
+[32m+[m[32m      value: DependencyManager[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 3614751886421723986, guid: 4776e88fc736f504fb919035f2bc2b87,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_RootOrder[m
+[32m+[m[32m      value: 9[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 3614751886421723986, guid: 4776e88fc736f504fb919035f2bc2b87,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalPosition.x[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 3614751886421723986, guid: 4776e88fc736f504fb919035f2bc2b87,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalPosition.y[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 3614751886421723986, guid: 4776e88fc736f504fb919035f2bc2b87,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalPosition.z[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 3614751886421723986, guid: 4776e88fc736f504fb919035f2bc2b87,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalRotation.w[m
+[32m+[m[32m      value: 1[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 3614751886421723986, guid: 4776e88fc736f504fb919035f2bc2b87,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalRotation.x[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 3614751886421723986, guid: 4776e88fc736f504fb919035f2bc2b87,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalRotation.y[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 3614751886421723986, guid: 4776e88fc736f504fb919035f2bc2b87,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalRotation.z[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 3614751886421723986, guid: 4776e88fc736f504fb919035f2bc2b87,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalEulerAnglesHint.x[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 3614751886421723986, guid: 4776e88fc736f504fb919035f2bc2b87,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalEulerAnglesHint.y[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 3614751886421723986, guid: 4776e88fc736f504fb919035f2bc2b87,[m
+[32m+[m[32m        type: 3}[m
+[32m+[m[32m      propertyPath: m_LocalEulerAnglesHint.z[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    m_RemovedComponents: [][m
+[32m+[m[32m  m_SourcePrefab: {fileID: 100100000, guid: 4776e88fc736f504fb919035f2bc2b87, type: 3}[m
+ --- !u!1001 &9068666864575447473[m
+ PrefabInstance:[m
+   m_ObjectHideFlags: 0[m
+[36m@@ -1584,7 +1759,7 @@[m [mPrefabInstance:[m
+     - target: {fileID: 9068666865361652739, guid: 77b65e4b55ac5e249b9bc591065c2a8b,[m
+         type: 3}[m
+       propertyPath: m_RootOrder[m
+[31m-      value: 7[m
+[32m+[m[32m      value: 6[m
+       objectReference: {fileID: 0}[m
+     - target: {fileID: 9068666865361652739, guid: 77b65e4b55ac5e249b9bc591065c2a8b,[m
+         type: 3}[m
+[1mdiff --git a/Assets/Scripts/DependencyManager.cs b/Assets/Scripts/DependencyManager.cs[m
+[1mindex 0b69d85..5a247ed 100644[m
+[1m--- a/Assets/Scripts/DependencyManager.cs[m
+[1m+++ b/Assets/Scripts/DependencyManager.cs[m
+[36m@@ -7,5 +7,6 @@[m [mnamespace StinkySteak.Rootdash.Dependency[m
+     {[m
+         public IProviderStationManager ProviderStationManager { get; set; }[m
+         public IProcessingStationManager ProcessingStationManager { get; set; }[m
+[32m+[m[32m        public IMatchManager MatchManager { get; set; }[m
+     }[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/Assets/Scripts/GameLauncher.cs b/Assets/Scripts/GameLauncher.cs[m
+[1mindex f8d2265..984bfe0 100644[m
+[1m--- a/Assets/Scripts/GameLauncher.cs[m
+[1m+++ b/Assets/Scripts/GameLauncher.cs[m
+[36m@@ -1,3 +1,7 @@[m
+[32m+[m[32musing Sirenix.OdinInspector;[m
+[32m+[m[32musing StinkySteak.Data;[m
+[32m+[m[32musing StinkySteak.Rootdash.Dependency;[m
+[32m+[m[32musing StinkySteak.Rootdash.Manager;[m
+ using StinkySteak.Rootdash.Util;[m
+ using UnityEngine;[m
+ [m
+[36m@@ -5,8 +9,28 @@[m [mnamespace StinkySteak.Rootdash.Launcher[m
+ {[m
+     public class GameLauncher : SimpleSingleton<GameLauncher>[m
+     {[m
+[31m-        [SerializeField] protected MonoBehaviour[] _systems;[m
+[31m-        [SerializeField] protected MonoBehaviour[] _uis;[m
+[32m+[m[32m        [SerializeField][AssetsOnly] protected DependencyManager _dependencyManager;[m
+[32m+[m
+[32m+[m[32m        [Space][m
+[32m+[m[32m        [SerializeField][AssetsOnly] protected MatchManager _matchManager;[m
+[32m+[m
+[32m+[m[32m        [Space][m
+[32m+[m[32m        [SerializeField][AssetsOnly] protected MonoBehaviour[] _systems;[m
+[32m+[m[32m        [SerializeField][AssetsOnly] protected MonoBehaviour[] _uis;[m
+[32m+[m
+[32m+[m[32m        private IMatchManager _activeMatchManager;[m
+[32m+[m
+[32m+[m[32m        protected void SpawnDependencyManager()[m
+[32m+[m[32m            => Instantiate(_dependencyManager);[m
+[32m+[m
+[32m+[m[32m        protected void SpawnMatchManager()[m
+[32m+[m[32m            => _activeMatchManager = Instantiate(_matchManager);[m
+[32m+[m
+[32m+[m[32m        protected void StartGame(MatchConfig config)[m
+[32m+[m[32m        {[m
+[32m+[m[32m            _activeMatchManager.SetConfig(config);[m
+[32m+[m[32m            _activeMatchManager.StartMatch();[m
+[32m+[m[32m        }[m
+ [m
+         protected void SpawnSystems()[m
+         {[m
+[1mdiff --git a/Assets/Scripts/IProcessingStation.cs b/Assets/Scripts/IProcessingStation.cs[m
+[1mindex d8175e5..745611f 100644[m
+[1m--- a/Assets/Scripts/IProcessingStation.cs[m
+[1m+++ b/Assets/Scripts/IProcessingStation.cs[m
+[36m@@ -1,11 +1,15 @@[m
+[31m-using System.Collections;[m
+[31m-using System.Collections.Generic;[m
+[31m-using UnityEngine;[m
+[32m+[m[32musing StinkySteak.Rootdash.Data.Item;[m
+ [m
+ namespace StinkySteak.Rootdash.Station[m
+ {[m
+     public interface IProcessingStation[m
+     {[m
+[32m+[m[32m        int ItemInputId { get; }[m
+ [m
+[32m+[m[32m        bool IsReady { get; }[m
+[32m+[m[32m        bool IsProcessing { get; }[m
+[32m+[m
+[32m+[m[32m        bool TryProcess();[m
+[32m+[m[32m        bool TryCollect(out ItemData itemOutput);[m
+     }[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/Assets/Scripts/PlayerItem.cs b/Assets/Scripts/PlayerItem.cs[m
+[1mindex a48940e..8ceefeb 100644[m
+[1m--- a/Assets/Scripts/PlayerItem.cs[m
+[1m+++ b/Assets/Scripts/PlayerItem.cs[m
+[36m@@ -10,15 +10,17 @@[m [mnamespace StinkySteak.Rootdash.Player[m
+ [m
+         public ItemData HeldItem => _heldItem;[m
+ [m
+[31m-        public void SetHeldItem(ItemData heldItem)[m
+[32m+[m[32m        public bool IsHolding => _heldItem != null;[m
+[32m+[m
+[32m+[m[32m        public void SetHeldItem(ItemData newItem, bool forceReplace = false)[m
+         {[m
+[31m-            if (heldItem != null)[m
+[32m+[m[32m            if (IsHolding && newItem != null && !forceReplace)[m
+             {[m
+[31m-                Debug.LogWarning($"[PlayerItem]: Held Item Exist: {heldItem.Hash}");[m
+[32m+[m[32m                Debug.LogWarning($"[PlayerItem]: Held Item Exist: {_heldItem.Hash}");[m
+                 return;[m
+             }[m
+ [m
+[31m-            _heldItem = heldItem;[m
+[32m+[m[32m            _heldItem = newItem;[m
+         }[m
+     }[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/Assets/Scripts/ProcessingStation.cs b/Assets/Scripts/ProcessingStation.cs[m
+[1mindex 15cfff7..bd4fe0e 100644[m
+[1m--- a/Assets/Scripts/ProcessingStation.cs[m
+[1m+++ b/Assets/Scripts/ProcessingStation.cs[m
+[36m@@ -23,18 +23,25 @@[m [mnamespace StinkySteak.Rootdash.Station[m
+         private float _duration;[m
+ [m
+ [m
+[32m+[m[32m        public int ItemInputId => _itemInput.Id;[m
+         public string Name => _name;[m
+[32m+[m[32m        public bool IsReady => _isReady;[m
+[32m+[m[32m        public bool IsProcessing => _isProcessing;[m
+[32m+[m
+ [m
+         private IProcessingStationManager _manager;[m
+ [m
+[31m-        private void Start()[m
+[31m-            => _manager = DependencyManager.Instance.ProcessingStationManager;[m
+[32m+[m[32m        public event System.Action OnProcessingDone;[m
+ [m
+[31m-        public void Interact()[m
+[32m+[m[32m        private void Start()[m
+         {[m
+[31m-            _manager.Interact(this);[m
+[32m+[m[32m            _manager = DependencyManager.Instance.ProcessingStationManager;[m
+[32m+[m[32m            _manager.Register(this);[m
+         }[m
+ [m
+[32m+[m[32m        public void Interact()[m
+[32m+[m[32m            => _manager.Interact(this);[m
+[32m+[m
+         private void Update()[m
+         {[m
+             if (_isProcessing)[m
+[36m@@ -48,14 +55,32 @@[m [mnamespace StinkySteak.Rootdash.Station[m
+ [m
+         private void ProcessingDone()[m
+         {[m
+[31m-            _isProcessing = true;[m
+[32m+[m[32m            _isProcessing = false;[m
+[32m+[m[32m            _isReady = true;[m
+[32m+[m[32m            OnProcessingDone?.Invoke();[m
+         }[m
+ [m
+[31m-        public void Process()[m
+[32m+[m[32m        public bool TryCollect(out ItemData processedItem)[m
+         {[m
+[31m-            if (_isProcessing || _isReady) return;[m
+[32m+[m[32m            processedItem = null;[m
+[32m+[m[32m            if (!_isReady) return false;[m
+ [m
+[32m+[m[32m            processedItem = _itemOutput;[m
+[32m+[m[32m            _isReady = false;[m
+[32m+[m
+[32m+[m[32m            print($"[ProcessingStation]: ({gameObject.name}) Sending Output {processedItem.Hash}");[m
+[32m+[m[32m            return true;[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m        public bool TryProcess()[m
+[32m+[m[32m        {[m
+[32m+[m[32m            if (_isProcessing || _isReady) return false;[m
+[32m+[m
+[32m+[m[32m            print($"[ProcessingStation]: ({gameObject.name}) Processing...");[m
+[32m+[m
+[32m+[m[32m            _isProcessing = true;[m
+             _duration = _processingDuration;[m
+[32m+[m[32m            return true;[m
+         }[m
+     }[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/Assets/Scripts/ProviderStation.cs b/Assets/Scripts/ProviderStation.cs[m
+[1mindex dc3b27f..a5ab451 100644[m
+[1m--- a/Assets/Scripts/ProviderStation.cs[m
+[1m+++ b/Assets/Scripts/ProviderStation.cs[m
+[36m@@ -17,11 +17,12 @@[m [mnamespace StinkySteak.Rootdash.Station[m
+         private IProviderStationManager _manager;[m
+ [m
+         private void Start()[m
+[31m-            => _manager = DependencyManager.Instance.ProviderStationManager;[m
+[31m-[m
+[31m-        public void Interact()[m
+         {[m
+[31m-            _manager.Interact(this);[m
+[32m+[m[32m            _manager = DependencyManager.Instance.ProviderStationManager;[m
+[32m+[m[32m            _manager.Register(this);[m
+         }[m
+[32m+[m
+[32m+[m[32m        public void Interact()[m
+[32m+[m[32m            => _manager.Interact(this);[m
+     }[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/Assets/Scripts/ProviderStationManager.cs b/Assets/Scripts/ProviderStationManager.cs[m
+[1mindex 8841d69..fd92513 100644[m
+[1m--- a/Assets/Scripts/ProviderStationManager.cs[m
+[1m+++ b/Assets/Scripts/ProviderStationManager.cs[m
+[36m@@ -19,8 +19,6 @@[m [mnamespace StinkySteak.Rootdash.Manager[m
+             => _stations.Add(station);[m
+ [m
+         private void Start()[m
+[31m-        {[m
+[31m-            DependencyManager.Instance.ProviderStationManager = this;[m
+[31m-        }[m
+[32m+[m[32m            => DependencyManager.Instance.ProviderStationManager = this;[m
+     }[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/Assets/Scripts/SOHash.cs b/Assets/Scripts/SOHash.cs[m
+[1mindex e771eba..15d66c7 100644[m
+[1m--- a/Assets/Scripts/SOHash.cs[m
+[1m+++ b/Assets/Scripts/SOHash.cs[m
+[36m@@ -1,14 +1,14 @@[m
+[31m-using System.Collections;[m
+[31m-using System.Collections.Generic;[m
+ using UnityEngine;[m
+ [m
+ namespace StinkySteak.Rootdash.Data[m
+ {[m
+     public class SOHash : ScriptableObject[m
+     {[m
+[32m+[m[32m        [SerializeField] private int _id;[m
+         [SerializeField] private string _hash;[m
+         [SerializeField] private string _displayName;[m
+ [m
+[32m+[m[32m        public int Id => _id;[m
+         public string Hash => _hash;[m
+         public string DisplayName => _displayName;[m
+     }[m
+[1mdiff --git a/ProjectSettings/GraphicsSettings.asset b/ProjectSettings/GraphicsSettings.asset[m
+[1mindex 6f9573b..2c6e80d 100644[m
+[1m--- a/ProjectSettings/GraphicsSettings.asset[m
+[1m+++ b/ProjectSettings/GraphicsSettings.asset[m
+[36m@@ -3,7 +3,7 @@[m
+ --- !u!30 &1[m
+ GraphicsSettings:[m
+   m_ObjectHideFlags: 0[m
+[31m-  serializedVersion: 12[m
+[32m+[m[32m  serializedVersion: 14[m
+   m_Deferred:[m
+     m_Mode: 1[m
+     m_Shader: {fileID: 69, guid: 0000000000000000f000000000000000, type: 0}[m
+[36m@@ -28,14 +28,17 @@[m [mGraphicsSettings:[m
+   m_LensFlare:[m
+     m_Mode: 1[m
+     m_Shader: {fileID: 102, guid: 0000000000000000f000000000000000, type: 0}[m
+[32m+[m[32m  m_VideoShadersIncludeMode: 2[m
+   m_AlwaysIncludedShaders:[m
+   - {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}[m
+   - {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}[m
+   - {fileID: 10783, guid: 0000000000000000f000000000000000, type: 0}[m
+   m_PreloadedShaders: [][m
+[32m+[m[32m  m_PreloadShadersBatchTimeLimit: -1[m
+   m_SpritesDefaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000,[m
+     type: 0}[m
+[31m-  m_CustomRenderPipeline: {fileID: 0}[m
+[32m+[m[32m  m_CustomRenderPipeline: {fileID: 11400000, guid: 681886c5eb7344803b6206f758bf0b1c,[m
+[32m+[m[32m    type: 2}[m
+   m_TransparencySortMode: 3[m
+   m_TransparencySortAxis: {x: 0, y: 1, z: 1}[m
+   m_DefaultRenderingPath: 1[m
+[36m@@ -55,5 +58,9 @@[m [mGraphicsSettings:[m
+   m_FogKeepExp2: 1[m
+   m_AlbedoSwatchInfos: [][m
+   m_LightsUseLinearIntensity: 0[m
+[31m-  m_LightsUseColorTemperature: 0[m
+[32m+[m[32m  m_LightsUseColorTemperature: 1[m
+[32m+[m[32m  m_DefaultRenderingLayerMask: 1[m
+   m_LogWhenShaderIsCompiled: 0[m
+[32m+[m[32m  m_SRPDefaultSettings:[m
+[32m+[m[32m    UnityEngine.Rendering.Universal.UniversalRenderPipeline: {fileID: 11400000, guid: e0aef0f840b2e8e469f91d2fb7476d2c,[m
+[32m+[m[32m      type: 2}[m
+[1mdiff --git a/ProjectSettings/ProjectSettings.asset b/ProjectSettings/ProjectSettings.asset[m
+[1mindex 4cf21a0..881ef05 100644[m
+[1m--- a/ProjectSettings/ProjectSettings.asset[m
+[1m+++ b/ProjectSettings/ProjectSettings.asset[m
+[36m@@ -768,7 +768,7 @@[m [mPlayerSettings:[m
+     m_VersionCode: 1[m
+     m_VersionName: [m
+   apiCompatibilityLevel: 6[m
+[31m-  activeInputHandler: 0[m
+[32m+[m[32m  activeInputHandler: 2[m
+   windowsGamepadBackendHint: 0[m
+   cloudProjectId: [m
+   framebufferDepthMemorylessMode: 0[m
+[1mdiff --git a/UserSettings/Layouts/default-2021.dwlt b/UserSettings/Layouts/default-2021.dwlt[m
+[1mindex 27d8989..d359798 100644[m
+[1m--- a/UserSettings/Layouts/default-2021.dwlt[m
+[1m+++ b/UserSettings/Layouts/default-2021.dwlt[m
+[36m@@ -20,11 +20,39 @@[m [mMonoBehaviour:[m
+     height: 780.8[m
+   m_ShowMode: 4[m
+   m_Title: Console[m
+[31m-  m_RootView: {fileID: 6}[m
+[32m+[m[32m  m_RootView: {fileID: 7}[m
+   m_MinSize: {x: 875, y: 300}[m
+   m_MaxSize: {x: 10000, y: 10000}[m
+   m_Maximized: 1[m
+ --- !u!114 &2[m
+[32m+[m[32mMonoBehaviour:[m
+[32m+[m[32m  m_ObjectHideFlags: 52[m
+[32m+[m[32m  m_CorrespondingSourceObject: {fileID: 0}[m
+[32m+[m[32m  m_PrefabInstance: {fileID: 0}[m
+[32m+[m[32m  m_PrefabAsset: {fileID: 0}[m
+[32m+[m[32m  m_GameObject: {fileID: 0}[m
+[32m+[m[32m  m_Enabled: 1[m
+[32m+[m[32m  m_EditorHideFlags: 0[m
+[32m+[m[32m  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}[m
+[32m+[m[32m  m_Name: GameView[m
+[32m+[m[32m  m_EditorClassIdentifier:[m[41m [m
+[32m+[m[32m  m_Children: [][m
+[32m+[m[32m  m_Position:[m
+[32m+[m[32m    serializedVersion: 2[m
+[32m+[m[32m    x: 246.4[m
+[32m+[m[32m    y: 0[m
+[32m+[m[32m    width: 789.6[m
+[32m+[m[32m    height: 434.4[m
+[32m+[m[32m  m_MinSize: {x: 202, y: 221}[m
+[32m+[m[32m  m_MaxSize: {x: 4002, y: 4021}[m
+[32m+[m[32m  m_ActualView: {fileID: 18}[m
+[32m+[m[32m  m_Panes:[m
+[32m+[m[32m  - {fileID: 17}[m
+[32m+[m[32m  - {fileID: 18}[m
+[32m+[m[32m  - {fileID: 13}[m
+[32m+[m[32m  m_Selected: 1[m
+[32m+[m[32m  m_LastSelected: 0[m
+[32m+[m[32m--- !u!114 &3[m
+ MonoBehaviour:[m
+   m_ObjectHideFlags: 52[m
+   m_CorrespondingSourceObject: {fileID: 0}[m
+[36m@@ -37,8 +65,8 @@[m [mMonoBehaviour:[m
+   m_Name: [m
+   m_EditorClassIdentifier: [m
+   m_Children:[m
+[31m-  - {fileID: 9}[m
+[31m-  - {fileID: 3}[m
+[32m+[m[32m  - {fileID: 10}[m
+[32m+[m[32m  - {fileID: 4}[m
+   m_Position:[m
+     serializedVersion: 2[m
+     x: 0[m
+[36m@@ -48,8 +76,8 @@[m [mMonoBehaviour:[m
+   m_MinSize: {x: 300, y: 200}[m
+   m_MaxSize: {x: 24288, y: 16192}[m
+   vertical: 0[m
+[31m-  controlID: 23[m
+[31m---- !u!114 &3[m
+[32m+[m[32m  controlID: 78[m
+[32m+[m[32m--- !u!114 &4[m
+ MonoBehaviour:[m
+   m_ObjectHideFlags: 52[m
+   m_CorrespondingSourceObject: {fileID: 0}[m
+[36m@@ -64,18 +92,18 @@[m [mMonoBehaviour:[m
+   m_Children: [][m
+   m_Position:[m
+     serializedVersion: 2[m
+[31m-    x: 1190.4[m
+[32m+[m[32m    x: 1036[m
+     y: 0[m
+[31m-    width: 345.59998[m
+[32m+[m[32m    width: 500[m
+     height: 730.8[m
+[31m-  m_MinSize: {x: 275, y: 50}[m
+[31m-  m_MaxSize: {x: 4000, y: 4000}[m
+[32m+[m[32m  m_MinSize: {x: 276, y: 71}[m
+[32m+[m[32m  m_MaxSize: {x: 4001, y: 4021}[m
+   m_ActualView: {fileID: 15}[m
+   m_Panes:[m
+   - {fileID: 15}[m
+   m_Selected: 0[m
+   m_LastSelected: 0[m
+[31m---- !u!114 &4[m
+[32m+[m[32m--- !u!114 &5[m
+ MonoBehaviour:[m
+   m_ObjectHideFlags: 52[m
+   m_CorrespondingSourceObject: {fileID: 0}[m
+[36m@@ -92,16 +120,16 @@[m [mMonoBehaviour:[m
+     serializedVersion: 2[m
+     x: 0[m
+     y: 0[m
+[31m-    width: 284.8[m
+[32m+[m[32m    width: 246.4[m
+     height: 434.4[m
+[31m-  m_MinSize: {x: 200, y: 200}[m
+[31m-  m_MaxSize: {x: 4000, y: 4000}[m
+[32m+[m[32m  m_MinSize: {x: 201, y: 221}[m
+[32m+[m[32m  m_MaxSize: {x: 4001, y: 4021}[m
+   m_ActualView: {fileID: 16}[m
+   m_Panes:[m
+   - {fileID: 16}[m
+   m_Selected: 0[m
+   m_LastSelected: 0[m
+[31m---- !u!114 &5[m
+[32m+[m[32m--- !u!114 &6[m
+ MonoBehaviour:[m
+   m_ObjectHideFlags: 52[m
+   m_CorrespondingSourceObject: {fileID: 0}[m
+[36m@@ -118,7 +146,7 @@[m [mMonoBehaviour:[m
+     serializedVersion: 2[m
+     x: 0[m
+     y: 434.4[m
+[31m-    width: 1190.4[m
+[32m+[m[32m    width: 1036[m
+     height: 296.4[m
+   m_MinSize: {x: 101, y: 121}[m
+   m_MaxSize: {x: 4001, y: 4021}[m
+[36m@@ -128,8 +156,8 @@[m [mMonoBehaviour:[m
+   - {fileID: 19}[m
+   - {fileID: 12}[m
+   m_Selected: 1[m
+[31m-  m_LastSelected: 2[m
+[31m---- !u!114 &6[m
+[32m+[m[32m  m_LastSelected: 0[m
+[32m+[m[32m--- !u!114 &7[m
+ MonoBehaviour:[m
+   m_ObjectHideFlags: 52[m
+   m_CorrespondingSourceObject: {fileID: 0}[m
+[36m@@ -142,9 +170,9 @@[m [mMonoBehaviour:[m
+   m_Name: [m
+   m_EditorClassIdentifier: [m
+   m_Children:[m
+[31m-  - {fileID: 7}[m
+[31m-  - {fileID: 2}[m
+   - {fileID: 8}[m
+[32m+[m[32m  - {fileID: 3}[m
+[32m+[m[32m  - {fileID: 9}[m
+   m_Position:[m
+     serializedVersion: 2[m
+     x: 0[m
+[36m@@ -157,7 +185,7 @@[m [mMonoBehaviour:[m
+   m_TopViewHeight: 30[m
+   m_UseBottomView: 1[m
+   m_BottomViewHeight: 20[m
+[31m---- !u!114 &7[m
+[32m+[m[32m--- !u!114 &8[m
+ MonoBehaviour:[m
+   m_ObjectHideFlags: 52[m
+   m_CorrespondingSourceObject: {fileID: 0}[m
+[36m@@ -179,7 +207,7 @@[m [mMonoBehaviour:[m
+   m_MinSize: {x: 0, y: 0}[m
+   m_MaxSize: {x: 0, y: 0}[m
+   m_LastLoadedLayoutName: [m
+[31m---- !u!114 &8[m
+[32m+[m[32m--- !u!114 &9[m
+ MonoBehaviour:[m
+   m_ObjectHideFlags: 52[m
+   m_CorrespondingSourceObject: {fileID: 0}[m
+[36m@@ -200,7 +228,7 @@[m [mMonoBehaviour:[m
+     height: 20[m
+   m_MinSize: {x: 0, y: 0}[m
+   m_MaxSize: {x: 0, y: 0}[m
+[31m---- !u!114 &9[m
+[32m+[m[32m--- !u!114 &10[m
+ MonoBehaviour:[m
+   m_ObjectHideFlags: 52[m
+   m_CorrespondingSourceObject: {fileID: 0}[m
+[36m@@ -213,19 +241,19 @@[m [mMonoBehaviour:[m
+   m_Name: [m
+   m_EditorClassIdentifier: [m
+   m_Children:[m
+[31m-  - {fileID: 10}[m
+[31m-  - {fileID: 5}[m
+[32m+[m[32m  - {fileID: 11}[m
+[32m+[m[32m  - {fileID: 6}[m
+   m_Position:[m
+     serializedVersion: 2[m
+     x: 0[m
+     y: 0[m
+[31m-    width: 1190.4[m
+[32m+[m[32m    width: 1036[m
+     height: 730.8[m
+   m_MinSize: {x: 200, y: 200}[m
+   m_MaxSize: {x: 16192, y: 16192}[m
+   vertical: 1[m
+[31m-  controlID: 50[m
+[31m---- !u!114 &10[m
+[32m+[m[32m  controlID: 79[m
+[32m+[m[32m--- !u!114 &11[m
+ MonoBehaviour:[m
+   m_ObjectHideFlags: 52[m
+   m_CorrespondingSourceObject: {fileID: 0}[m
+[36m@@ -238,46 +266,18 @@[m [mMonoBehaviour:[m
+   m_Name: [m
+   m_EditorClassIdentifier: [m
+   m_Children:[m
+[31m-  - {fileID: 4}[m
+[31m-  - {fileID: 11}[m
+[32m+[m[32m  - {fileID: 5}[m
+[32m+[m[32m  - {fileID: 2}[m
+   m_Position:[m
+     serializedVersion: 2[m
+     x: 0[m
+     y: 0[m
+[31m-    width: 1190.4[m
+[32m+[m[32m    width: 1036[m
+     height: 434.4[m
+   m_MinSize: {x: 200, y: 100}[m
+   m_MaxSize: {x: 16192, y: 8096}[m
+   vertical: 0[m
+[31m-  controlID: 86[m
+[31m---- !u!114 &11[m
+[31m-MonoBehaviour:[m
+[31m-  m_ObjectHideFlags: 52[m
+[31m-  m_CorrespondingSourceObject: {fileID: 0}[m
+[31m-  m_PrefabInstance: {fileID: 0}[m
+[31m-  m_PrefabAsset: {fileID: 0}[m
+[31m-  m_GameObject: {fileID: 0}[m
+[31m-  m_Enabled: 1[m
+[31m-  m_EditorHideFlags: 1[m
+[31m-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}[m
+[31m-  m_Name: GameView[m
+[31m-  m_EditorClassIdentifier: [m
+[31m-  m_Children: [][m
+[31m-  m_Position:[m
+[31m-    serializedVersion: 2[m
+[31m-    x: 284.8[m
+[31m-    y: 0[m
+[31m-    width: 905.60004[m
+[31m-    height: 434.4[m
+[31m-  m_MinSize: {x: 202, y: 221}[m
+[31m-  m_MaxSize: {x: 4002, y: 4021}[m
+[31m-  m_ActualView: {fileID: 18}[m
+[31m-  m_Panes:[m
+[31m-  - {fileID: 17}[m
+[31m-  - {fileID: 18}[m
+[31m-  - {fileID: 13}[m
+[31m-  m_Selected: 1[m
+[31m-  m_LastSelected: 0[m
+[32m+[m[32m  controlID: 52[m
+ --- !u!114 &12[m
+ MonoBehaviour:[m
+   m_ObjectHideFlags: 52[m
+[36m@@ -344,7 +344,8 @@[m [mMonoBehaviour:[m
+   m_MaxSize: {x: 10000, y: 10000}[m
+   m_TitleContent:[m
+     m_Text: Project[m
+[31m-    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}[m
+[32m+[m[32m    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000,[m
+[32m+[m[32m      type: 0}[m
+     m_Tooltip: [m
+   m_Pos:[m
+     serializedVersion: 2[m
+[36m@@ -382,9 +383,9 @@[m [mMonoBehaviour:[m
+     m_IsLocked: 1[m
+   m_FolderTreeState:[m
+     scrollPos: {x: 0, y: 0}[m
+[31m-    m_SelectedIDs: 68710000[m
+[31m-    m_LastClickedID: 29032[m
+[31m-    m_ExpandedIDs: 000000006071000000ca9a3b[m
+[32m+[m[32m    m_SelectedIDs: 16710000[m
+[32m+[m[32m    m_LastClickedID: 28950[m
+[32m+[m[32m    m_ExpandedIDs: 00000000cc710000ce710000d0710000d2710000d4710000d6710000d8710000[m
+     m_RenameOverlay:[m
+       m_UserAcceptedRename: 0[m
+       m_Name: [m
+[36m@@ -412,7 +413,7 @@[m [mMonoBehaviour:[m
+     scrollPos: {x: 0, y: 0}[m
+     m_SelectedIDs: [m
+     m_LastClickedID: 0[m
+[31m-    m_ExpandedIDs: [m
+[32m+[m[32m    m_ExpandedIDs: 00000000cc710000ce710000d0710000d2710000d4710000d6710000d8710000[m
+     m_RenameOverlay:[m
+       m_UserAcceptedRename: 0[m
+       m_Name: [m
+[36m@@ -437,9 +438,9 @@[m [mMonoBehaviour:[m
+       m_Icon: {fileID: 0}[m
+       m_ResourceFile: [m
+   m_ListAreaState:[m
+[31m-    m_SelectedInstanceIDs: 78710000[m
+[31m-    m_LastClickedInstanceID: 29048[m
+[31m-    m_HadKeyboardFocusLastEvent: 1[m
+[32m+[m[32m    m_SelectedInstanceIDs: 52a1ffff[m
+[32m+[m[32m    m_LastClickedInstanceID: -24238[m
+[32m+[m[32m    m_HadKeyboardFocusLastEvent: 0[m
+     m_ExpandedInstanceIDs: [m
+     m_RenameOverlay:[m
+       m_UserAcceptedRename: 0[m
+[36m@@ -484,13 +485,14 @@[m [mMonoBehaviour:[m
+   m_MaxSize: {x: 10000, y: 10000}[m
+   m_TitleContent:[m
+     m_Text: Project[m
+[31m-    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}[m
+[32m+[m[32m    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000,[m
+[32m+[m[32m      type: 0}[m
+     m_Tooltip: [m
+   m_Pos:[m
+     serializedVersion: 2[m
+     x: 0[m
+     y: 508[m
+[31m-    width: 1189.4[m
+[32m+[m[32m    width: 1035[m
+     height: 275.4[m
+   m_ViewDataDictionary: {fileID: 0}[m
+   m_OverlayCanvas:[m
+[36m@@ -509,22 +511,22 @@[m [mMonoBehaviour:[m
+     m_SkipHidden: 0[m
+     m_SearchArea: 1[m
+     m_Folders:[m
+[31m-    - Assets[m
+[32m+[m[32m    - Assets/Prefabs/Managers[m
+     m_Globs: [][m
+     m_OriginalText: [m
+   m_ViewMode: 1[m
+   m_StartGridSize: 64[m
+   m_LastFolders:[m
+[31m-  - Assets[m
+[32m+[m[32m  - Assets/Prefabs/Managers[m
+   m_LastFoldersGridSize: -1[m
+   m_LastProjectPath: C:\Users\StinkySteak\Documents\Unity\Projects\Rootdash[m
+   m_LockTracker:[m
+     m_IsLocked: 1[m
+   m_FolderTreeState:[m
+[31m-    scrollPos: {x: 0, y: 0}[m
+[31m-    m_SelectedIDs: 60710000[m
+[31m-    m_LastClickedID: 29024[m
+[31m-    m_ExpandedIDs: 0000000000ca9a3b[m
+[32m+[m[32m    scrollPos: {x: 0, y: 176.6}[m
+[32m+[m[32m    m_SelectedIDs: 0cb50000[m
+[32m+[m[32m    m_LastClickedID: 46348[m
+[32m+[m[32m    m_ExpandedIDs: 00000000cc710000ce710000d0710000d2710000d4710000d6710000d8710000[m
+     m_RenameOverlay:[m
+       m_UserAcceptedRename: 0[m
+       m_Name: [m
+[36m@@ -552,7 +554,7 @@[m [mMonoBehaviour:[m
+     scrollPos: {x: 0, y: 0}[m
+     m_SelectedIDs: [m
+     m_LastClickedID: 0[m
+[31m-    m_ExpandedIDs: 00000000[m
+[32m+[m[32m    m_ExpandedIDs: 00000000cc710000ce710000d0710000d2710000d4710000d6710000d8710000[m
+     m_RenameOverlay:[m
+       m_UserAcceptedRename: 0[m
+       m_Name: [m
+[36m@@ -577,10 +579,10 @@[m [mMonoBehaviour:[m
+       m_Icon: {fileID: 0}[m
+       m_ResourceFile: [m
+   m_ListAreaState:[m
+[31m-    m_SelectedInstanceIDs: 78710000[m
+[31m-    m_LastClickedInstanceID: 29048[m
+[31m-    m_HadKeyboardFocusLastEvent: 1[m
+[31m-    m_ExpandedInstanceIDs: c623000078710000[m
+[32m+[m[32m    m_SelectedInstanceIDs: a2700000[m
+[32m+[m[32m    m_LastClickedInstanceID: 28834[m
+[32m+[m[32m    m_HadKeyboardFocusLastEvent: 0[m
+[32m+[m[32m    m_ExpandedInstanceIDs: c62300007871000014a40000b49d0000[m
+     m_RenameOverlay:[m
+       m_UserAcceptedRename: 0[m
+       m_Name: [m
+[36m@@ -596,7 +598,7 @@[m [mMonoBehaviour:[m
+       m_IsRenaming: 0[m
+       m_OriginalEventType: 11[m
+       m_IsRenamingFilename: 1[m
+[31m-      m_ClientGUIView: {fileID: 5}[m
+[32m+[m[32m      m_ClientGUIView: {fileID: 6}[m
+     m_CreateAssetUtility:[m
+       m_EndAction: {fileID: 0}[m
+       m_InstanceID: 0[m
+[36m@@ -624,13 +626,14 @@[m [mMonoBehaviour:[m
+   m_MaxSize: {x: 4000, y: 4000}[m
+   m_TitleContent:[m
+     m_Text: Inspector[m
+[31m-    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}[m
+[32m+[m[32m    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000,[m
+[32m+[m[32m      type: 0}[m
+     m_Tooltip: [m
+   m_Pos:[m
+     serializedVersion: 2[m
+[31m-    x: 1190.4[m
+[32m+[m[32m    x: 1036[m
+     y: 73.6[m
+[31m-    width: 344.59998[m
+[32m+[m[32m    width: 499[m
+     height: 709.8[m
+   m_ViewDataDictionary: {fileID: 0}[m
+   m_OverlayCanvas:[m
+[36m@@ -665,13 +668,14 @@[m [mMonoBehaviour:[m
+   m_MaxSize: {x: 4000, y: 4000}[m
+   m_TitleContent:[m
+     m_Text: Hierarchy[m
+[31m-    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}[m
+[32m+[m[32m    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000,[m
+[32m+[m[32m      type: 0}[m
+     m_Tooltip: [m
+   m_Pos:[m
+     serializedVersion: 2[m
+     x: 0[m
+     y: 73.6[m
+[31m-    width: 283.8[m
+[32m+[m[32m    width: 245.4[m
+     height: 413.4[m
+   m_ViewDataDictionary: {fileID: 0}[m
+   m_OverlayCanvas:[m
+[36m@@ -680,7 +684,7 @@[m [mMonoBehaviour:[m
+   m_SceneHierarchy:[m
+     m_TreeViewState:[m
+       scrollPos: {x: 0, y: 0}[m
+[31m-      m_SelectedIDs: 78710000[m
+[32m+[m[32m      m_SelectedIDs:[m[41m [m
+       m_LastClickedID: 0[m
+       m_ExpandedIDs: 1efbffff[m
+       m_RenameOverlay:[m
+[36m@@ -698,7 +702,7 @@[m [mMonoBehaviour:[m
+         m_IsRenaming: 0[m
+         m_OriginalEventType: 11[m
+         m_IsRenamingFilename: 0[m
+[31m-        m_ClientGUIView: {fileID: 4}[m
+[32m+[m[32m        m_ClientGUIView: {fileID: 5}[m
+       m_SearchString: [m
+     m_ExpandedScenes: [][m
+     m_CurrenRootInstanceID: 0[m
+[36m@@ -722,13 +726,14 @@[m [mMonoBehaviour:[m
+   m_MaxSize: {x: 4000, y: 4000}[m
+   m_TitleContent:[m
+     m_Text: Scene[m
+[31m-    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000, type: 0}[m
+[32m+[m[32m    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000,[m
+[32m+[m[32m      type: 0}[m
+     m_Tooltip: [m
+   m_Pos:[m
+     serializedVersion: 2[m
+[31m-    x: 284.80002[m
+[32m+[m[32m    x: 246.40001[m
+     y: 73.6[m
+[31m-    width: 903.60004[m
+[32m+[m[32m    width: 787.6[m
+     height: 413.4[m
+   m_ViewDataDictionary: {fileID: 0}[m
+   m_OverlayCanvas:[m
+[36m@@ -986,9 +991,9 @@[m [mMonoBehaviour:[m
+   m_PlayAudio: 0[m
+   m_AudioPlay: 0[m
+   m_Position:[m
+[31m-    m_Target: {x: 2.6147428, y: 0.13072008, z: 0.0066697206}[m
+[32m+[m[32m    m_Target: {x: 2.443629, y: 2.4270432, z: -0.02105315}[m
+     speed: 2[m
+[31m-    m_Value: {x: 2.6147428, y: 0.13072008, z: 0.0066697206}[m
+[32m+[m[32m    m_Value: {x: 2.443629, y: 2.4270432, z: -0.02105315}[m
+   m_RenderMode: 0[m
+   m_CameraMode:[m
+     drawMode: 0[m
+[36m@@ -1039,9 +1044,9 @@[m [mMonoBehaviour:[m
+     speed: 2[m
+     m_Value: {x: 0, y: 0, z: 0, w: 1}[m
+   m_Size:[m
+[31m-    m_Target: 3.7641697[m
+[32m+[m[32m    m_Target: 3.1410005[m
+     speed: 2[m
+[31m-    m_Value: 3.7641697[m
+[32m+[m[32m    m_Value: 3.1410005[m
+   m_Ortho:[m
+     m_Target: 1[m
+     speed: 2[m
+[36m@@ -1082,13 +1087,14 @@[m [mMonoBehaviour:[m
+   m_MaxSize: {x: 4000, y: 4000}[m
+   m_TitleContent:[m
+     m_Text: Game[m
+[31m-    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}[m
+[32m+[m[32m    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000,[m
+[32m+[m[32m      type: 0}[m
+     m_Tooltip: [m
+   m_Pos:[m
+     serializedVersion: 2[m
+[31m-    x: 284.80002[m
+[32m+[m[32m    x: 246.40001[m
+     y: 73.6[m
+[31m-    width: 903.60004[m
+[32m+[m[32m    width: 787.6[m
+     height: 413.4[m
+   m_ViewDataDictionary: {fileID: 0}[m
+   m_OverlayCanvas:[m
+[36m@@ -1097,7 +1103,7 @@[m [mMonoBehaviour:[m
+   m_SerializedViewNames: [][m
+   m_SerializedViewValues: [][m
+   m_PlayModeViewName: GameView[m
+[31m-  m_ShowGizmos: 0[m
+[32m+[m[32m  m_ShowGizmos: 1[m
+   m_TargetDisplay: 0[m
+   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}[m
+   m_TargetSize: {x: 1920, y: 1080}[m
+[36m@@ -1107,7 +1113,7 @@[m [mMonoBehaviour:[m
+   m_EnterPlayModeBehavior: 0[m
+   m_UseMipMap: 0[m
+   m_VSyncEnabled: 0[m
+[31m-  m_Gizmos: 0[m
+[32m+[m[32m  m_Gizmos: 1[m
+   m_Stats: 0[m
+   m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000[m
+   m_ZoomArea:[m
+[36m@@ -1125,7 +1131,7 @@[m [mMonoBehaviour:[m
+     m_VAllowExceedBaseRangeMax: 1[m
+     m_ScaleWithWindow: 0[m
+     m_HSlider: 0[m
+[31m-    m_VSlider: 0[m
+[32m+[m[32m    m_VSlider: 1[m
+     m_IgnoreScrollWheelUntilClicked: 0[m
+     m_EnableMouseInput: 1[m
+     m_EnableSliderZoomHorizontal: 0[m
+[36m@@ -1136,23 +1142,23 @@[m [mMonoBehaviour:[m
+       serializedVersion: 2[m
+       x: 0[m
+       y: 21[m
+[31m-      width: 903.60004[m
+[32m+[m[32m      width: 787.6[m
+       height: 392.4[m
+[31m-    m_Scale: {x: 0.45416665, y: 0.45416665}[m
+[31m-    m_Translation: {x: 451.80002, y: 196.2}[m
+[32m+[m[32m    m_Scale: {x: 0.4784722, y: 0.47847217}[m
+[32m+[m[32m    m_Translation: {x: 393.8, y: 196.2}[m
+     m_MarginLeft: 0[m
+     m_MarginRight: 0[m
+     m_MarginTop: 0[m
+     m_MarginBottom: 0[m
+     m_LastShownAreaInsideMargins:[m
+       serializedVersion: 2[m
+[31m-      x: -994.78906[m
+[31m-      y: -432[m
+[31m-      width: 1989.5781[m
+[31m-      height: 864[m
+[32m+[m[32m      x: -823.0363[m
+[32m+[m[32m      y: -410.05518[m
+[32m+[m[32m      width: 1646.0726[m
+[32m+[m[32m      height: 820.11035[m
+     m_MinimalGUI: 1[m
+[31m-  m_defaultScale: 0.45416665[m
+[31m-  m_LastWindowPixelSize: {x: 1129.5, y: 516.75}[m
+[32m+[m[32m  m_defaultScale: 0.4784722[m
+[32m+[m[32m  m_LastWindowPixelSize: {x: 984.5, y: 516.75}[m
+   m_ClearInEditMode: 1[m
+   m_NoCameraWarning: 1[m
+   m_LowResolutionForAspectRatios: 01000000000000000000[m
+[36m@@ -1174,13 +1180,14 @@[m [mMonoBehaviour:[m
+   m_MaxSize: {x: 4000, y: 4000}[m
+   m_TitleContent:[m
+     m_Text: Console[m
+[31m-    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}[m
+[32m+[m[32m    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000,[m
+[32m+[m[32m      type: 0}[m
+     m_Tooltip: [m
+   m_Pos:[m
+     serializedVersion: 2[m
+     x: 0[m
+     y: 508[m
+[31m-    width: 1189.4[m
+[32m+[m[32m    width: 1035[m
+     height: 275.4[m
+   m_ViewDataDictionary: {fileID: 0}[m
+   m_OverlayCanvas:[m

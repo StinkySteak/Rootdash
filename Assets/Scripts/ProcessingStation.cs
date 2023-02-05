@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace StinkySteak.Rootdash.Station
 {
-    public class ProcessingStation : MonoBehaviour, IInteractable, IProcessingStation
+    public class ProcessingStation : TickedBehaviour, IInteractable, IProcessingStation
     {
         [SerializeField] private string _name;
 
@@ -18,9 +18,9 @@ namespace StinkySteak.Rootdash.Station
 
         [Space]
         [SerializeField][ReadOnly] private bool _isReady;
-        [SerializeField][ReadOnly] private bool _isProcessing;
+        private bool _isProcessing => _processingTimer.IsRunning;
 
-        private float _duration;
+        private TickTimer _processingTimer;
 
 
         public int ItemInputId => _itemInput.Id;
@@ -44,18 +44,15 @@ namespace StinkySteak.Rootdash.Station
 
         private void Update()
         {
-            if (_isProcessing)
+            if (_processingTimer.IsExpired(TickManager))
             {
-                _duration -= Time.deltaTime;
-
-                if (_duration <= 0)
-                    ProcessingDone();
+                ProcessingDone();
+                _processingTimer = TickTimer.None;
             }
         }
 
         private void ProcessingDone()
         {
-            _isProcessing = false;
             _isReady = true;
             OnProcessingDone?.Invoke();
         }
@@ -78,8 +75,7 @@ namespace StinkySteak.Rootdash.Station
 
             print($"[ProcessingStation]: ({gameObject.name}) Processing...");
 
-            _isProcessing = true;
-            _duration = _processingDuration;
+            _processingTimer = TickTimer.CreateFromSeconds(TickManager, _processingDuration);
             return true;
         }
     }
