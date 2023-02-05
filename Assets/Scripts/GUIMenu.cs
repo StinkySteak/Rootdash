@@ -41,12 +41,10 @@ namespace StinkySteak.Rootdash.UI.GUI
 
         private void OnStoryClicked()
         {
-            _storyImage.sprite = _storySprites[_currentStory];
-
             if (_currentStory >= _storySprites.Length - 1)
                 CloseStory();
 
-            _currentStory++;
+            _storyImage.sprite = _storySprites[++_currentStory];
         }
 
         private void CloseStory()

@@ -18,6 +18,17 @@ namespace StinkySteak.Rootdash.UI.Listing
         private void Start()
         {
             _manager = DependencyManager.Instance.TickManager;
+            _manager.OnTick += Tick;
+        }
+
+        private void OnDestroy()
+        {
+            _manager.OnTick -= Tick;
+        }
+
+        private void Tick()
+        {
+            UpdateRequirements();
         }
 
         private void Update()
@@ -32,7 +43,18 @@ namespace StinkySteak.Rootdash.UI.Listing
             _order = activeOrder;
             _slider.maxValue = _order.Customer.Duration;
 
-            for (int i = 0; i < _order.Customer.RequiredItems.Length; i++)
+            UpdateRequirements();
+        }
+
+        private void UpdateRequirements()
+        {
+            HideAllRequirements();
+            ShowRemainingRequirements();
+        }
+
+        private void ShowRemainingRequirements()
+        {
+            for (int i = 0; i < _order.RemainingRequiredItems.Count; i++)
             {
                 _image.sprite = _order.Customer.Sprite;
 
@@ -41,6 +63,15 @@ namespace StinkySteak.Rootdash.UI.Listing
 
                 _requirements[i].Images[0].gameObject.SetActive(true);
                 _requirements[i].Images[1].sprite = _order.Customer.RequiredItems[i].Sprite;
+            }
+        }
+
+        private void HideAllRequirements()
+        {
+            for (int i = 0; i < _order.RemainingRequiredItems.Count; i++)
+            {
+                foreach (var requirement in _requirements)
+                    requirement.gameObject.SetActive(false);
             }
         }
     }

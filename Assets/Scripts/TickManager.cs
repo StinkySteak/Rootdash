@@ -1,9 +1,9 @@
 using Sirenix.OdinInspector;
 using StinkySteak.Data;
 using StinkySteak.Rootdash.Dependency;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace StinkySteak.Rootdash.Manager
 {
@@ -18,6 +18,9 @@ namespace StinkySteak.Rootdash.Manager
         [SerializeField][ReadOnly] private float _elapsed;
 
         private float exceededTime;
+
+        public event Action OnTick;
+
         public int Tick => _tick;
         public float Rate => _rate;
         public int TickRate => _tickConfig.TickRate;
@@ -55,6 +58,8 @@ namespace StinkySteak.Rootdash.Manager
             {
                 _behaviours[i].TickUpdate();
             }
+
+            OnTick?.Invoke();
         }
 
         public void Register(TickedBehaviour behaviour)

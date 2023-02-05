@@ -13,5 +13,7 @@ namespace StinkySteak.Rootdash.Manager
 
         void Register(TickedBehaviour behaviour);
         void Unregister(TickedBehaviour behaviour);
+
+        event System.Action OnTick;
     }
 }
