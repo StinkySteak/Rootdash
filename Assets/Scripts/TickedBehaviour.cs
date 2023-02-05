@@ -13,13 +13,14 @@ namespace StinkySteak.Rootdash
         public bool IsInitialized => _tickManager != null;
 
         private void Awake()
-        {
-            Injected();
-        }
+            => Injected();
 
         protected virtual void Injected()
         {
             _tickManager = DependencyManager.Instance.TickManager;
+            _tickManager.Register(this);
         }
+
+        public virtual void TickUpdate() { }
     }
 }

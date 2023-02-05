@@ -10,6 +10,7 @@ namespace StinkySteak.Rootdash.Dependency
         public ISubmittingStationManager SubmittingStationManager { get; set; }
         public IMatchManager MatchManager { get; set; }
         public ITickManager TickManager { get; set; }
-        public IOrderProcessor CustomerProcessor { get; set; }
+        public IOrderProcessor OrderProcessor { get; set; }
+        public ILevelConfigManager LevelConfigManager { get; set; }
     }
 }

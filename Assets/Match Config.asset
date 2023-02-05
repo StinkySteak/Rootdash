@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d28bd39a4ec8f234ba7978ba7bee7485, type: 3}
   m_Name: Match Config
   m_EditorClassIdentifier: 
-  _duration: 30
+  _duration: 5
   _customers:
   - _spawnDelay: 0
-    _customer: {fileID: 11400000, guid: 9ca4850c89df61747b74020e47dd9461, type: 2}
+    _customer: {fileID: 11400000, guid: 3e2a46a0d2b319a49943820293ccad45, type: 2}
   - _spawnDelay: 3
     _customer: {fileID: 11400000, guid: 9ca4850c89df61747b74020e47dd9461, type: 2}

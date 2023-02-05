@@ -10,5 +10,8 @@ namespace StinkySteak.Rootdash.Manager
         int Tick { get; }
         float Rate { get; }
         int TickRate { get; }
+
+        void Register(TickedBehaviour behaviour);
+        void Unregister(TickedBehaviour behaviour);
     }
 }

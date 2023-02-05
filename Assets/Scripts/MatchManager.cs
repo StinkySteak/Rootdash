@@ -58,6 +58,8 @@ namespace StinkySteak.Rootdash.Manager
 
         private void EndMatch()
         {
+            print($"[MatchManager]: Match Ended");
+
             _matchState = MatchState.Ending;
             OnMatchStateChanged?.Invoke(_matchState);
         }

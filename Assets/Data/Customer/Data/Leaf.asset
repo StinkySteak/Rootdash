@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28a42c6805ce7ca4280a53c80f13a5a3, type: 3}
   m_Name: Leaf
   m_EditorClassIdentifier: 
+  _id: 2
   _hash: leaf
   _displayName: Leaf
+  _duration: 5
+  _requiredItems: []
   _sprite: {fileID: 0}

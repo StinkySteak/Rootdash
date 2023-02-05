@@ -7,5 +7,7 @@ namespace StinkySteak.Rootdash.Data.Item
     public class ItemData : SOHash
     {
         [SerializeField][PreviewField] private Sprite _sprite;
+
+        public Sprite Sprite => _sprite;
     }
 }

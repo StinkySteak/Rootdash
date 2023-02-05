@@ -26,6 +26,12 @@ namespace StinkySteak.Rootdash
             };
         }
 
+        public int RemainingTick(ITickManager tickManager)
+            => Target - tickManager.Tick;
+
+        public float GetRemainingSeconds(ITickManager tickManager)
+            => Mathf.Max(RemainingTick(tickManager) / (float)tickManager.TickRate, 0f);
+
         public bool IsExpired(ITickManager tickManager)
             => tickManager.Tick >= Target && Target > 0;
 

@@ -9,5 +9,7 @@ namespace StinkySteak.Rootdash.Manager
         IList<ActiveOrder> ActiveOrders { get; }
 
         bool TrySubmit(ItemData submittedItem);
+
+        event System.Action OnOrderUpdated;
     }
 }

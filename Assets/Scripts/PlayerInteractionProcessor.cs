@@ -25,9 +25,7 @@ namespace StinkySteak.Rootdash.Player
             _processingStationManager = DependencyManager.Instance.ProcessingStationManager;
             _providerStationManager = DependencyManager.Instance.ProviderStationManager;
             _submittingStationManager = DependencyManager.Instance.SubmittingStationManager;
-            _orderProcessor = DependencyManager.Instance.CustomerProcessor;
-
-            print($"Customer Processor: {_orderProcessor == null}");
+            _orderProcessor = DependencyManager.Instance.OrderProcessor;
 
             _processingStationManager.OnInteract += OnProcessingStationManager;
             _providerStationManager.OnInteract += OnProviderStationManager;

@@ -40,7 +40,7 @@ namespace StinkySteak.Rootdash.Manager
             base.Injected();
             _matchManager = DependencyManager.Instance.MatchManager;
             _matchManager.OnMatchStateChanged += MatchStateChanged;
-            DependencyManager.Instance.CustomerProcessor = this;
+            DependencyManager.Instance.OrderProcessor = this;
         }
 
         private void MatchStateChanged(MatchState state)
@@ -96,9 +96,27 @@ namespace StinkySteak.Rootdash.Manager
             return false;
         }
 
-        private void Update()
+
+        public override void TickUpdate()
         {
             AddCustomer();
+            RemoveCustomer();
+        }
+
+        private void RemoveCustomer()
+        {
+            for (int i = 0; i < _activeOrders.Count; i++)
+            {
+                ActiveOrder order = _activeOrders[i];
+
+                if(order.Timer.IsExpiredOrNotRunning(TickManager))
+                {
+                    print($"[OrderProcessor]: Failed Customer: {order.Customer.Hash}");
+
+                    _activeOrders.RemoveAt(i);
+                    OnOrderUpdated?.Invoke();
+                }
+            }
         }
 
         private void StartProcess()
@@ -123,6 +141,7 @@ namespace StinkySteak.Rootdash.Manager
                 //add next
                 _activeOrders.Add(ActiveOrder.Create(_customerSpawning[_activeCustomerIndex + 1].CustomerData, TickManager));
                 _activeCustomerIndex++;
+                OnOrderUpdated?.Invoke();
 
                 if (IsNextInexist())
                     return;

@@ -14,6 +14,8 @@ namespace StinkySteak.Rootdash.Player
         private Vector2 _lastFacingDirection;
         public Vector2 LastFacingDirection => _lastFacingDirection;
 
+        public Vector2 Velocity => _rigidbody.velocity;
+
         private void Start()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
